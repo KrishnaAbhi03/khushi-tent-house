@@ -69,17 +69,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.8rem 3rem;
+            padding: 0.8rem 2rem;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .logo-container img {
-            height: 55px;
+            height: 50px;
             width: auto;
             transition: transform 0.3s ease;
         }
@@ -90,7 +90,7 @@
 
         .logo-text {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--brand-gold);
             letter-spacing: 1px;
@@ -98,7 +98,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
@@ -131,6 +131,16 @@
             color: var(--brand-gold);
         }
 
+        /* Mobile Menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--brand-gold);
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
         /* Hero Section */
         .hero {
             margin-top: 70px;
@@ -144,6 +154,7 @@
             color: var(--brand-white);
             position: relative;
             overflow: hidden;
+            padding: 2rem;
         }
 
         .hero::before {
@@ -165,14 +176,13 @@
 
         .hero-content {
             max-width: 900px;
-            padding: 2rem;
             position: relative;
             z-index: 1;
         }
 
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
             color: var(--brand-gold);
@@ -182,7 +192,7 @@
         }
 
         .hero-tagline {
-            font-size: 2.2rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
             font-weight: 600;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
@@ -190,7 +200,7 @@
         }
 
         .hero-subtitle {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-bottom: 3rem;
             opacity: 0.95;
             font-weight: 400;
@@ -207,7 +217,7 @@
         }
 
         .btn {
-            padding: 1.2rem 3rem;
+            padding: 1.2rem 2.5rem;
             font-size: 1.1rem;
             font-weight: 600;
             border: none;
@@ -258,7 +268,7 @@
 
         /* About Section */
         .about {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--cream);
         }
 
@@ -267,7 +277,7 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
             align-items: center;
         }
 
@@ -284,8 +294,8 @@
         .about-image::before {
             content: '';
             position: absolute;
-            top: -20px;
-            left: -20px;
+            top: -15px;
+            left: -15px;
             width: 100%;
             height: 100%;
             border: 3px solid var(--brand-gold);
@@ -295,28 +305,28 @@
 
         .about-content h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--brand-brown);
             margin-bottom: 1rem;
         }
 
         .about-content .subtitle {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--brand-gold);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-weight: 600;
         }
 
         .about-content p {
             color: var(--gray);
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.9;
+            font-size: 1rem;
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
         }
 
         .proprietor {
-            margin-top: 2rem;
-            padding: 1.5rem;
+            margin-top: 1.5rem;
+            padding: 1.2rem;
             background: var(--brand-white);
             border-left: 4px solid var(--brand-gold);
             border-radius: 10px;
@@ -324,18 +334,18 @@
 
         .proprietor strong {
             color: var(--brand-brown);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         /* Section Title */
         .section-title {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
 
         .section-title h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3.5rem;
+            font-size: 3rem;
             color: var(--brand-brown);
             margin-bottom: 0.5rem;
             position: relative;
@@ -355,14 +365,14 @@
         }
 
         .section-title .subtitle {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: var(--gray);
             margin-top: 1.5rem;
         }
 
         /* Services Section */
         .services {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--brand-white);
         }
 
@@ -370,13 +380,13 @@
             max-width: 1300px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
             background: var(--cream);
-            padding: 3rem 2rem;
+            padding: 2.5rem 1.5rem;
             border-radius: 20px;
             text-align: center;
             transition: all 0.4s ease;
@@ -401,21 +411,21 @@
         }
 
         .service-card:hover {
-            transform: translateY(-15px);
+            transform: translateY(-10px);
             border-color: var(--brand-gold);
             box-shadow: 0 20px 50px rgba(129, 68, 6, 0.2);
         }
 
         .service-icon {
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 2rem;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 1.5rem;
             background: linear-gradient(135deg, var(--brand-brown), var(--accent-red));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--brand-gold);
             box-shadow: 0 10px 30px rgba(129, 68, 6, 0.3);
             transition: all 0.4s;
@@ -427,7 +437,7 @@
 
         .service-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             color: var(--brand-brown);
             margin-bottom: 1rem;
             font-weight: 700;
@@ -435,13 +445,13 @@
 
         .service-card p {
             color: var(--gray);
-            line-height: 1.8;
-            font-size: 1rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
         }
 
         /* Gallery Section */
         .gallery {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--light-gray);
         }
 
@@ -457,7 +467,7 @@
             position: relative;
             overflow: hidden;
             border-radius: 15px;
-            height: 400px;
+            height: 350px;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
@@ -479,7 +489,7 @@
             left: 0;
             right: 0;
             background: linear-gradient(to top, rgba(129, 68, 6, 0.9), transparent);
-            padding: 2rem;
+            padding: 1.5rem;
             transform: translateY(100%);
             transition: transform 0.4s;
         }
@@ -490,13 +500,13 @@
 
         .gallery-overlay h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             color: var(--brand-gold);
         }
 
         /* Testimonials */
         .testimonials {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--brand-white);
         }
 
@@ -504,13 +514,13 @@
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
         }
 
         .testimonial-card {
             background: var(--cream);
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 2rem;
             border-radius: 20px;
             position: relative;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
@@ -523,27 +533,28 @@
         }
 
         .quote-icon {
-            font-size: 4rem;
+            font-size: 3rem;
             color: var(--brand-gold);
             opacity: 0.3;
             position: absolute;
-            top: 20px;
-            left: 20px;
+            top: 15px;
+            left: 15px;
         }
 
         .stars {
             color: var(--brand-gold);
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
         }
 
         .testimonial-card p {
             font-style: italic;
             color: var(--gray);
-            line-height: 1.9;
-            margin-bottom: 2rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
+            font-size: 0.95rem;
         }
 
         .testimonial-author {
@@ -553,53 +564,57 @@
         }
 
         .author-avatar {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             background: linear-gradient(135deg, var(--brand-brown), var(--accent-red));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--brand-gold);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             font-weight: 700;
+            flex-shrink: 0;
         }
 
         .author-info h4 {
             color: var(--brand-brown);
             font-weight: 600;
             margin-bottom: 0.3rem;
+            font-size: 1rem;
         }
 
         .author-info p {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             margin: 0;
         }
 
         /* Service Area */
         .service-area {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--cream);
         }
 
         .locations-container {
             max-width: 1000px;
-            margin: 3rem auto 0;
+            margin: 2rem auto 0;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
         .location-card {
             background: var(--brand-white);
-            padding: 2rem 3rem;
+            padding: 2rem 2.5rem;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s;
             border: 2px solid transparent;
+            flex: 1;
+            min-width: 200px;
         }
 
         .location-card:hover {
@@ -609,25 +624,26 @@
         }
 
         .location-card i {
-            font-size: 3rem;
+            font-size: 2.5rem;
             color: var(--brand-brown);
             margin-bottom: 1rem;
         }
 
         .location-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--brand-brown);
             margin-bottom: 0.5rem;
         }
 
         .location-card p {
             color: var(--gray);
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
         .contact {
-            padding: 6rem 2rem;
+            padding: 4rem 2rem;
             background: var(--brand-white);
         }
 
@@ -636,19 +652,19 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
+            gap: 3rem;
         }
 
         .contact-info {
             background: linear-gradient(135deg, var(--brand-brown), var(--accent-red));
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 20px;
             color: var(--brand-white);
         }
 
         .contact-info h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--brand-gold);
             margin-bottom: 2rem;
         }
@@ -656,16 +672,16 @@
         .contact-item {
             display: flex;
             align-items: start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
             background: rgba(255,255,255,0.1);
             border-radius: 10px;
             backdrop-filter: blur(10px);
         }
 
         .contact-item i {
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--brand-gold);
             margin-top: 0.3rem;
         }
@@ -674,6 +690,7 @@
             color: var(--brand-white);
             text-decoration: none;
             transition: color 0.3s;
+            word-break: break-word;
         }
 
         .contact-item a:hover {
@@ -682,36 +699,37 @@
 
         .contact-form {
             background: var(--cream);
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 20px;
         }
 
         .contact-form h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             color: var(--brand-brown);
             margin-bottom: 2rem;
         }
 
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.3rem;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 0.7rem;
+            margin-bottom: 0.6rem;
             font-weight: 600;
             color: var(--brand-black);
+            font-size: 0.95rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1rem;
+            padding: 0.9rem;
             border: 2px solid #ddd;
             border-radius: 10px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
+            font-size: 0.95rem;
             transition: all 0.3s;
         }
 
@@ -724,14 +742,14 @@
 
         .form-group textarea {
             resize: vertical;
-            min-height: 150px;
+            min-height: 130px;
         }
 
         /* Footer */
         footer {
             background: linear-gradient(135deg, var(--brand-black) 0%, #1a1a1a 100%);
             color: var(--brand-white);
-            padding: 4rem 2rem 2rem;
+            padding: 3rem 2rem 1.5rem;
         }
 
         .footer-content {
@@ -739,29 +757,30 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 2fr 1fr 1fr;
-            gap: 3rem;
-            margin-bottom: 3rem;
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
         }
 
         .footer-about h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--brand-gold);
             margin-bottom: 1rem;
         }
 
         .footer-about p {
             color: rgba(255,255,255,0.8);
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+            font-size: 0.95rem;
         }
 
         .footer-links h4,
         .footer-contact h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             color: var(--brand-gold);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.2rem;
         }
 
         .footer-links ul {
@@ -772,8 +791,9 @@
             color: rgba(255,255,255,0.8);
             text-decoration: none;
             display: block;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.7rem;
             transition: all 0.3s;
+            font-size: 0.9rem;
         }
 
         .footer-links a:hover {
@@ -783,10 +803,11 @@
 
         .footer-contact p {
             color: rgba(255,255,255,0.8);
-            margin-bottom: 1rem;
+            margin-bottom: 0.9rem;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 0.7rem;
+            font-size: 0.9rem;
         }
 
         .footer-contact i {
@@ -796,19 +817,19 @@
         .social-links {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
 
         .social-links a {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             background: var(--brand-brown);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: var(--brand-white);
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             transition: all 0.3s;
         }
 
@@ -820,16 +841,17 @@
 
         .footer-bottom {
             text-align: center;
-            padding-top: 2rem;
+            padding-top: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
         }
 
         /* Scroll to top button */
         .scroll-top {
             position: fixed;
-            bottom: 30px;
-            right: 30px;
+            bottom: 25px;
+            right: 25px;
             width: 50px;
             height: 50px;
             background: linear-gradient(135deg, var(--brand-gold), var(--brand-brown));
@@ -838,7 +860,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             cursor: pointer;
             opacity: 0;
             visibility: hidden;
@@ -870,42 +892,191 @@
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .about-image::before {
+                top: -10px;
+                left: -10px;
+            }
         }
 
         @media (max-width: 768px) {
-            body{
-                width:100%;
-            }
             nav {
-                padding: 1rem 1.5rem;
+                padding: 0.8rem 1.5rem;
+            }
+
+            .logo-container img {
+                height: 45px;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
             }
 
             .nav-links {
                 display: none;
             }
 
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                margin-top: 65px;
+                min-height: 90vh;
+                padding: 1.5rem;
+            }
+
             .hero h1 {
-                font-size: 3rem;
+                font-size: 2.5rem;
+                letter-spacing: 1px;
             }
 
             .hero-tagline {
-                font-size: 1.5rem;
+                font-size: 1.3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
             }
 
             .section-title h2 {
-                font-size: 2.5rem;
+                font-size: 2.2rem;
+            }
+
+            .section-title .subtitle {
+                font-size: 1rem;
+            }
+
+            .about {
+                padding: 3rem 1.5rem;
+            }
+
+            .about-content h2 {
+                font-size: 2rem;
+            }
+
+            .about-content .subtitle {
+                font-size: 1.1rem;
             }
 
             .about-image::before {
                 display: none;
             }
 
+            .services {
+                padding: 3rem 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .gallery {
+                padding: 3rem 1.5rem;
+            }
+
             .gallery-grid {
                 grid-template-columns: 1fr;
+                gap: 1.2rem;
             }
 
             .gallery-item {
-                height: 350px;
+                height: 300px;
+            }
+
+            .testimonials {
+                padding: 3rem 1.5rem;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .service-area {
+                padding: 3rem 1.5rem;
+            }
+
+            .locations-container {
+                flex-direction: column;
+            }
+
+            .location-card {
+                min-width: 100%;
+            }
+
+            .contact {
+                padding: 3rem 1.5rem;
+            }
+
+            .contact-info h3,
+            .contact-form h3 {
+                font-size: 1.8rem;
+            }
+
+            .contact-info {
+                padding: 2rem;
+            }
+
+            .contact-form {
+                padding: 2rem;
+            }
+
+            footer {
+                padding: 2.5rem 1.5rem 1.5rem;
+            }
+
+            .footer-content {
+                gap: 2rem;
+            }
+
+            .scroll-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.1rem;
+            }
+
+            .hero-subtitle {
+                font-size: 0.95rem;
+            }
+
+            .btn {
+                padding: 0.9rem 1.8rem;
+                font-size: 0.95rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .about-content h2 {
+                font-size: 1.8rem;
+            }
+
+            .service-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .gallery-item {
+                height: 250px;
             }
         }
     </style>
@@ -915,8 +1086,8 @@
     <header id="header">
         <nav>
             <div class="logo-container">
-                <img src="https://i.ibb.co/9hLQjYy/khushi-tent-logo-transparent.png" alt="Khushi Tent House Logo">
-                <!-- <span class="logo-text">Khushi Tent House</span> -->
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House Logo">
+                <span class="logo-text">Khushi Tent House</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
@@ -926,6 +1097,9 @@
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </nav>
     </header>
 
@@ -1239,11 +1413,11 @@
                 <h4 class="serif-text">Contact</h4>
                 <p><i class="fas fa-phone-alt"></i> +91-9451672350</p>
                 <p><i class="fas fa-envelope"></i> khushitenthouse124@gmail.com</p>
-                <p><i class="fas fa-map-marker-alt"></i> Vijayant Khand -1, Near Water Tank, Gomti Nagar, Lucknow</p>
+                <p><i class="fas fa-map-marker-alt"></i> Vijayant Khand -1, Gomti Nagar, Lucknow</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Khushi Tent House. All Rights Reserved. | Designed with ❤️ for your special moments</p>
+            <p>&copy; 2024 Khushi Tent House. All Rights Reserved.</p>
         </div>
     </footer>
 
