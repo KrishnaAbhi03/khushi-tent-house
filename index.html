@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khushi Tent House - Wedding & Event Services in Lucknow</title>
-    <meta name="description" content="Premium tent, decoration, catering and event setup services in Lucknow, Barabanki & nearby districts. Khushiyan Kare Dugni Khushi Tent House Sang">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Khushi Tent House - Premium Wedding & Event Services in Lucknow</title>
+    <meta name="description" content="Khushi Tent House offers premium wedding tent setup, stage decoration, catering, lighting, and event arrangements in Lucknow, Barabanki & nearby districts.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <style>
         * {
             margin: 0;
@@ -15,20 +16,25 @@
         }
 
         :root {
-            --primary-red: #C41E3A;
+            --primary-red: #B8001F;
+            --deep-red: #8B0000;
             --primary-gold: #D4AF37;
-            --dark-gold: #B8941E;
-            --light-gold: #F4E4C1;
+            --rich-gold: #C5A028;
+            --light-gold: #F5E6D3;
             --white: #FFFFFF;
-            --cream: #FFF8F0;
-            --dark: #2C1810;
-            --shadow: rgba(196, 30, 58, 0.2);
+            --cream: #FFF9F0;
+            --dark: #1A1A1A;
+            --gray: #666666;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             color: var(--dark);
-            line-height: 1.6;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
@@ -36,38 +42,63 @@
             font-family: 'Noto Sans Devanagari', sans-serif;
         }
 
+        .serif-text {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
         /* Header */
         header {
-            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
-            color: var(--white);
-            padding: 1rem 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px var(--shadow);
+            background: rgba(26, 26, 26, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background: rgba(26, 26, 26, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            padding: 1rem 3rem;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo-container img {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
         }
 
         .logo-text {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--primary-gold);
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -75,7 +106,25 @@
             color: var(--white);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-gold);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
         }
 
         .nav-links a:hover {
@@ -84,14 +133,15 @@
 
         /* Hero Section */
         .hero {
-            margin-top: 70px;
-            background: linear-gradient(rgba(196, 30, 58, 0.85), rgba(139, 0, 0, 0.85)), 
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23C41E3A" width="1200" height="600"/><path fill="%23D4AF37" opacity="0.1" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 6rem 2rem;
+            margin-top: 80px;
+            min-height: 100vh;
+            background: linear-gradient(rgba(184, 0, 31, 0.7), rgba(139, 0, 0, 0.8)), 
+                        url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: var(--white);
             position: relative;
             overflow: hidden;
         }
@@ -103,58 +153,63 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" opacity="0.05" fill="%23D4AF37">✦</text></svg>') repeat;
-            animation: sparkle 20s linear infinite;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23D4AF37" opacity="0.3"/></svg>') repeat;
+            animation: sparkle 30s linear infinite;
+            pointer-events: none;
         }
 
         @keyframes sparkle {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-100px); }
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-100px) rotate(360deg); }
         }
 
         .hero-content {
             max-width: 900px;
-            margin: 0 auto;
+            padding: 2rem;
             position: relative;
             z-index: 1;
         }
 
-        .logo-container {
+        .hero-logo {
             margin-bottom: 2rem;
             animation: fadeInDown 1s ease-out;
         }
 
-        .logo-container img {
-            max-width: 250px;
+        .hero-logo img {
+            max-width: 280px;
             height: auto;
-            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+            filter: drop-shadow(0 15px 40px rgba(0,0,0,0.6));
         }
 
         .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
             color: var(--primary-gold);
-            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-            animation: fadeInDown 1s ease-out 0.2s both;
+            text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+            letter-spacing: 2px;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
-        .tagline {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
+        .hero-tagline {
+            font-size: 2rem;
+            margin-bottom: 1rem;
             font-weight: 600;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            animation: fadeInDown 1s ease-out 0.4s both;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
+        .hero-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
             opacity: 0.95;
-            animation: fadeInDown 1s ease-out 0.6s both;
+            font-weight: 400;
+            letter-spacing: 1px;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
-        .cta-buttons {
+        .hero-cta {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
@@ -163,7 +218,7 @@
         }
 
         .btn {
-            padding: 1rem 2.5rem;
+            padding: 1.2rem 3rem;
             font-size: 1.1rem;
             font-weight: 600;
             border: none;
@@ -172,46 +227,39 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            gap: 0.7rem;
+            transition: all 0.4s ease;
+            letter-spacing: 0.5px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            background: linear-gradient(135deg, var(--primary-gold), var(--rich-gold));
             color: var(--dark);
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
         }
 
         .btn-secondary {
-            background: var(--white);
-            color: var(--primary-red);
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
         }
 
         .btn-secondary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 30px rgba(255,255,255,0.4);
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            background: var(--white);
+            color: var(--primary-red);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(255,255,255,0.3);
         }
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translateY(30px);
+                transform: translateY(40px);
             }
             to {
                 opacity: 1;
@@ -219,20 +267,97 @@
             }
         }
 
-        /* Services Section */
-        .services {
-            padding: 5rem 2rem;
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* About Section */
+        .about {
+            padding: 6rem 2rem;
             background: var(--cream);
         }
 
+        .about-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            width: 100%;
+            height: 100%;
+            border: 3px solid var(--primary-gold);
+            border-radius: 20px;
+            z-index: -1;
+        }
+
+        .about-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .about-content .subtitle {
+            font-size: 1.3rem;
+            color: var(--primary-gold);
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .about-content p {
+            color: var(--gray);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.9;
+        }
+
+        .proprietor {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: var(--white);
+            border-left: 4px solid var(--primary-gold);
+            border-radius: 10px;
+        }
+
+        .proprietor strong {
+            color: var(--primary-red);
+            font-size: 1.2rem;
+        }
+
+        /* Section Title */
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .section-title h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.5rem;
             color: var(--primary-red);
             margin-bottom: 0.5rem;
             position: relative;
@@ -242,147 +367,346 @@
         .section-title h2::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--dark-gold));
+            background: linear-gradient(90deg, var(--primary-gold), var(--rich-gold));
             border-radius: 2px;
         }
 
-        .section-title p {
-            color: #666;
-            font-size: 1.1rem;
+        .section-title .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+            margin-top: 1.5rem;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: var(--white);
         }
 
         .services-grid {
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
         .service-card {
-            background: var(--white);
-            padding: 2.5rem 2rem;
+            background: var(--cream);
+            padding: 3rem 2rem;
             border-radius: 20px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 3px solid transparent;
+            transition: all 0.4s ease;
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            transition: left 0.6s;
+        }
+
+        .service-card:hover::before {
+            left: 100%;
         }
 
         .service-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-15px);
             border-color: var(--primary-gold);
-            box-shadow: 0 15px 40px var(--shadow);
+            box-shadow: 0 20px 50px rgba(184, 0, 31, 0.15);
         }
 
         .service-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, var(--primary-red), #8B0000);
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: var(--primary-gold);
-            box-shadow: 0 8px 20px var(--shadow);
+            box-shadow: 0 10px 30px rgba(184, 0, 31, 0.3);
+            transition: all 0.4s;
+        }
+
+        .service-card:hover .service-icon {
+            transform: rotateY(360deg);
         }
 
         .service-card h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
             color: var(--primary-red);
             margin-bottom: 1rem;
+            font-weight: 700;
         }
 
         .service-card p {
-            color: #666;
+            color: var(--gray);
             line-height: 1.8;
+            font-size: 1rem;
         }
 
-        /* Coverage Section */
-        .coverage {
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
+        /* Why Choose Us */
+        .why-choose {
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--deep-red) 100%);
             color: var(--white);
-            text-align: center;
         }
 
-        .coverage h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        .why-choose .section-title h2 {
             color: var(--primary-gold);
         }
 
-        .locations {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
+        .why-choose .section-title .subtitle {
+            color: rgba(255,255,255,0.9);
         }
 
-        .location-badge {
-            background: rgba(255,255,255,0.15);
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            font-size: 1.2rem;
-            font-weight: 600;
-            border: 2px solid var(--primary-gold);
-            backdrop-filter: blur(10px);
-        }
-
-        /* Testimonials */
-        .testimonials {
-            padding: 5rem 2rem;
-            background: var(--white);
-        }
-
-        .testimonials-grid {
+        .features-grid {
             max-width: 1200px;
-            margin: 3rem auto 0;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-gold);
+        }
+
+        .feature-card p {
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .gallery-grid {
+            max-width: 1300px;
+            margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        .testimonial-card {
-            background: var(--cream);
-            padding: 2rem;
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
             border-radius: 15px;
-            border-left: 5px solid var(--primary-gold);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            height: 350px;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
 
-        .testimonial-card .stars {
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(184, 0, 31, 0.9), transparent);
+            padding: 2rem;
+            transform: translateY(100%);
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-overlay h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
             color: var(--primary-gold);
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 6rem 2rem;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(184, 0, 31, 0.15);
+        }
+
+        .quote-icon {
+            font-size: 4rem;
+            color: var(--primary-gold);
+            opacity: 0.3;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .stars {
+            color: var(--primary-gold);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
         }
 
         .testimonial-card p {
             font-style: italic;
-            color: #555;
-            margin-bottom: 1rem;
-            line-height: 1.8;
+            color: var(--gray);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
         }
 
-        .testimonial-card .author {
-            font-weight: 600;
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
             color: var(--primary-red);
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Service Area */
+        .service-area {
+            padding: 6rem 2rem;
+            background: var(--cream);
+        }
+
+        .locations-container {
+            max-width: 1000px;
+            margin: 3rem auto 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .location-card {
+            background: var(--white);
+            padding: 2rem 3rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .location-card:hover {
+            border-color: var(--primary-gold);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(184, 0, 31, 0.2);
+        }
+
+        .location-card i {
+            font-size: 3rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .location-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+        }
+
+        .location-card p {
+            color: var(--gray);
         }
 
         /* Contact Section */
         .contact {
-            padding: 5rem 2rem;
-            background: var(--cream);
+            padding: 6rem 2rem;
+            background: var(--white);
         }
 
         .contact-container {
@@ -390,56 +714,59 @@
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 4rem;
         }
 
         .contact-info {
-            background: var(--white);
-            padding: 2.5rem;
+            background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
+            padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            color: var(--white);
         }
 
         .contact-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            color: var(--primary-red);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            color: var(--primary-gold);
             margin-bottom: 2rem;
         }
 
         .contact-item {
             display: flex;
             align-items: start;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
         }
 
         .contact-item i {
+            font-size: 2rem;
             color: var(--primary-gold);
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
+            margin-top: 0.3rem;
         }
 
         .contact-item a {
-            color: var(--dark);
+            color: var(--white);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-item a:hover {
-            color: var(--primary-red);
+            color: var(--primary-gold);
         }
 
         .contact-form {
-            background: var(--white);
-            padding: 2.5rem;
+            background: var(--cream);
+            padding: 3rem;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .contact-form h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
             color: var(--primary-red);
             margin-bottom: 2rem;
         }
@@ -450,58 +777,104 @@
 
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
             color: var(--dark);
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 0.8rem;
+            padding: 1rem;
             border: 2px solid #ddd;
             border-radius: 10px;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
-            transition: border-color 0.3s;
+            transition: all 0.3s;
         }
 
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
             border-color: var(--primary-gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
         }
 
         .form-group textarea {
             resize: vertical;
-            min-height: 120px;
+            min-height: 150px;
         }
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--dark) 0%, #1a0f08 100%);
+            background: linear-gradient(135deg, var(--dark) 0%, #0a0a0a 100%);
             color: var(--white);
-            padding: 3rem 2rem 1.5rem;
-            text-align: center;
+            padding: 4rem 2rem 2rem;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
         }
 
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
+        .footer-about h3 {
+            font-family: 'Cormorant Garamond', serif;
             font-size: 2rem;
             color: var(--primary-gold);
             margin-bottom: 1rem;
         }
 
+        .footer-about p {
+            color: rgba(255,255,255,0.8);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.8rem;
+            transition: all 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-gold);
+            padding-left: 10px;
+        }
+
+        .footer-contact p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .footer-contact i {
+            color: var(--primary-gold);
+        }
+
         .social-links {
             display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 1rem;
+            margin-top: 2rem;
         }
 
         .social-links a {
@@ -513,7 +886,7 @@
             align-items: center;
             justify-content: center;
             color: var(--white);
-            font-size: 1.5rem;
+            font-size: 1.3rem;
             transition: all 0.3s;
         }
 
@@ -524,72 +897,95 @@
         }
 
         .footer-bottom {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
+            text-align: center;
+            padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-            color: rgba(255,255,255,0.7);
+            color: rgba(255,255,255,0.6);
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            .about-container,
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
             .nav-links {
                 display: none;
             }
 
             .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-tagline {
+                font-size: 1.5rem;
+            }
+
+            .section-title h2 {
                 font-size: 2.5rem;
             }
 
-            .tagline {
-                font-size: 1.3rem;
-            }
-
-            .contact-container {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
+            .about-image::before {
+                display: none;
             }
         }
 
-        /* Decorative Elements */
-        .mandala-decoration {
-            position: absolute;
-            opacity: 0.05;
-            pointer-events: none;
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--primary-gold), var(--rich-gold));
+            color: var(--dark);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
         }
 
-        .mandala-left {
-            top: 20%;
-            left: -100px;
-            width: 300px;
-            height: 300px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23D4AF37" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23D4AF37" stroke-width="1"/></svg>') no-repeat center;
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
         }
 
-        .mandala-right {
-            bottom: 20%;
-            right: -100px;
-            width: 300px;
-            height: 300px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23D4AF37" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23D4AF37" stroke-width="1"/></svg>') no-repeat center;
+        .scroll-top:hover {
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
     <!-- Header -->
-    <header>
+    <header id="header">
         <nav>
-            <div class="logo-text">Khushi Tent House</div>
+            <div class="logo-container">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House Logo">
+                <span class="logo-text">Khushi Tent House</span>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -598,18 +994,16 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="mandala-decoration mandala-left"></div>
-        <div class="mandala-decoration mandala-right"></div>
         <div class="hero-content">
-            <div class="logo-container">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House Logo">
+            <div class="hero-logo">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House">
             </div>
-            <h1>Khushi Tent House</h1>
-            <p class="tagline hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
-            <p>Premium Wedding & Event Services in Lucknow</p>
-            <div class="cta-buttons">
+            <h1 class="serif-text">Khushi Tent House</h1>
+            <p class="hero-tagline hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
+            <p class="hero-subtitle">Premium Wedding & Event Services in Lucknow</p>
+            <div class="hero-cta">
                 <a href="tel:+919451672350" class="btn btn-primary">
-                    <i class="fas fa-phone"></i> Call Now
+                    <i class="fas fa-phone-alt"></i> Call Now
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-calendar-check"></i> Book Now
@@ -618,104 +1012,245 @@
         </div>
     </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <div class="about-image" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069" alt="Wedding Decoration">
+            </div>
+            <div class="about-content" data-aos="fade-left">
+                <h2 class="serif-text">About Khushi Tent House</h2>
+                <p class="subtitle hindi-text">आपकी खुशियों का साथी</p>
+                <p>Welcome to Khushi Tent House, where we transform your special moments into unforgettable memories. With years of experience in the wedding and event industry, we pride ourselves on delivering exceptional service and creating magical experiences.</p>
+                <p>From intimate gatherings to grand celebrations, we handle every detail with precision and care. Our team of dedicated professionals ensures that your event is executed flawlessly, allowing you to enjoy every moment stress-free.</p>
+                <p>We specialize in traditional Indian weddings, corporate events, birthday celebrations, and all special occasions. Our commitment to quality, creativity, and customer satisfaction sets us apart in Lucknow and surrounding areas.</p>
+                <div class="proprietor">
+                    <p><strong>Mrs. Rita Yadav</strong> - Proprietor</p>
+                    <p class="hindi-text">आपके विश्वास और खुशियों की जिम्मेदारी हमारी</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Services Section -->
     <section id="services" class="services">
-        <div class="section-title">
-            <h2>Our Services</h2>
-            <p class="hindi-text">हमारी सेवाएं</p>
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Our Services</h2>
+            <p class="subtitle hindi-text">हमारी विशेष सेवाएं</p>
         </div>
         <div class="services-grid">
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                 <div class="service-icon">
                     <i class="fas fa-campground"></i>
                 </div>
-                <h3>Tent Services</h3>
-                <p>Premium quality tents for all occasions. From intimate gatherings to grand celebrations, we provide elegant tent solutions with perfect setup.</p>
+                <h3 class="serif-text">Wedding Tent Setup</h3>
+                <p>Premium quality tents with elegant designs for weddings and grand celebrations. Complete setup with proper lighting and ventilation systems.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                 <div class="service-icon">
-                    <i class="fas fa-palette"></i>
+                    <i class="fas fa-crown"></i>
                 </div>
-                <h3>Decoration</h3>
-                <p>Stunning decorations that transform your venue. Traditional and contemporary designs with beautiful floral arrangements and lighting.</p>
+                <h3 class="serif-text">Stage Decoration</h3>
+                <p>Stunning stage designs with traditional and contemporary themes. Beautiful backdrops, floral arrangements, and lighting effects.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-icon">
                     <i class="fas fa-utensils"></i>
                 </div>
-                <h3>Catering</h3>
-                <p>Delicious multi-cuisine catering services. From traditional Indian delicacies to international flavors, we serve excellence on every plate.</p>
+                <h3 class="serif-text">Catering Services</h3>
+                <p>Multi-cuisine catering with authentic flavors. From traditional Indian delicacies to international cuisines, served with excellence.</p>
             </div>
-            <div class="service-card">
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
                 <div class="service-icon">
-                    <i class="fas fa-rings-wedding"></i>
+                    <i class="fas fa-lightbulb"></i>
                 </div>
-                <h3>Wedding Setup</h3>
-                <p>Complete wedding planning and execution. We handle everything from mandap decoration to guest seating, making your special day perfect.</p>
+                <h3 class="serif-text">Lighting Solutions</h3>
+                <p>Professional lighting setups including decorative lights, spotlights, and ambient lighting to create the perfect atmosphere.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3 class="serif-text">Floral Decoration</h3>
+                <p>Exquisite floral arrangements with fresh flowers. Custom designs for mandaps, entrances, and venue decoration.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="service-icon">
+                    <i class="fas fa-glass-cheers"></i>
+                </div>
+                <h3 class="serif-text">Event Arrangements</h3>
+                <p>Complete event management for parties, corporate events, and celebrations. End-to-end planning and execution.</p>
             </div>
         </div>
     </section>
 
-    <!-- Coverage Section -->
-    <section class="coverage">
-        <h2>Service Coverage</h2>
-        <p class="hindi-text">हम यहाँ सेवा प्रदान करते हैं</p>
-        <div class="locations">
-            <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> Lucknow
+    <!-- Why Choose Us -->
+    <section class="why-choose">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Why Choose Us?</h2>
+            <p class="subtitle hindi-text">हमें क्यों चुनें?</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="feature-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h3 class="serif-text">Premium Quality</h3>
+                <p>We use only the finest materials and decorations to ensure your event looks spectacular. Quality is our top priority in everything we do.</p>
             </div>
-            <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> Barabanki
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="serif-text">Experienced Team</h3>
+                <p>Our skilled professionals have years of experience in creating memorable events. We handle every detail with expertise and care.</p>
             </div>
-            <div class="location-badge">
-                <i class="fas fa-map-marker-alt"></i> Nearby Districts
+            <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="serif-text">Service Assurance</h3>
+                <p>We guarantee timely delivery and flawless execution. Your satisfaction is our commitment, and we stand by our promises.</p>
             </div>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Event Gallery</h2>
+            <p class="subtitle hindi-text">हमारे कार्यों की झलक</p>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2b0?q=80&w=2098" alt="Wedding Setup">
+                <div class="gallery-overlay">
+                    <h4 class="serif-text">Grand Wedding Setup</h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069" alt="Stage Decoration">
+                <div class="gallery-overlay">
+                    <h4 class="serif-text">Elegant Stage Decoration</h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070" alt="Floral Decor">
+                <div class="gallery-overlay">
+                    <h4 class="serif-text">Beautiful Floral Arrangements</h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070" alt="Catering">
+                <div class="gallery-overlay">
+                    <h4 class="serif-text">Delicious Catering</h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
+                <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062" alt="Lighting">
+                <div class="gallery-overlay">
+                    <h4 class="serif-text">Stunning Lighting Effects</h4>
+                </div>
+            </div>
+            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069" alt="Event Setup">
+                <div class="gallery-overlay">
+                    <h4 class="serif-text">Complete Event Setup</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
     <section id="testimonials" class="testimonials">
-        <div class="section-title">
-            <h2>What Our Clients Say</h2>
-            <p class="hindi-text">हमारे ग्राहकों की राय</p>
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">What Our Clients Say</h2>
+            <p class="subtitle hindi-text">हमारे ग्राहकों की राय</p>
         </div>
         <div class="testimonials-grid">
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-quote-left quote-icon"></i>
                 <div class="stars">★★★★★</div>
-                <p>"Khushi Tent House made our wedding absolutely magical! The decoration was breathtaking and the catering was exceptional. Rita ji and her team handled everything professionally."</p>
-                <div class="author">- Priya & Rahul Sharma</div>
+                <p>"Khushi Tent House made our wedding absolutely magical! Rita ji and her team handled everything with such professionalism. The decoration was breathtaking, and the catering was exceptional. Highly recommended!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PS</div>
+                    <div class="author-info">
+                        <h4>Priya & Rahul Sharma</h4>
+                        <p>Wedding - December 2024</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-quote-left quote-icon"></i>
                 <div class="stars">★★★★★</div>
-                <p>"Outstanding service! From tent setup to food arrangements, everything was perfect. Highly recommend for any event in Lucknow. Very professional and courteous team."</p>
-                <div class="author">- Amit Verma</div>
+                <p>"Outstanding service from start to finish! The team was punctual, professional, and went above and beyond our expectations. The tent setup was perfect, and every detail was taken care of. Thank you for making our event memorable!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AV</div>
+                    <div class="author-info">
+                        <h4>Amit Verma</h4>
+                        <p>Corporate Event - November 2024</p>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card">
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-quote-left quote-icon"></i>
                 <div class="stars">★★★★★</div>
-                <p>"Best tent house in Lucknow! They transformed our venue beautifully. The attention to detail and quality of service exceeded our expectations. Thank you Rita ji!"</p>
-                <div class="author">- Neha Gupta</div>
+                <p>"Best tent house in Lucknow! The quality of service and attention to detail is unmatched. Rita ji personally ensured everything was perfect. The floral decoration and lighting were stunning. Will definitely recommend to everyone!"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">NG</div>
+                    <div class="author-info">
+                        <h4>Neha Gupta</h4>
+                        <p>Birthday Celebration - October 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area -->
+    <section class="service-area">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Service Coverage</h2>
+            <p class="subtitle hindi-text">हम यहाँ सेवा प्रदान करते हैं</p>
+        </div>
+        <div class="locations-container">
+            <div class="location-card" data-aos="flip-left" data-aos-delay="100">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 class="serif-text">Lucknow</h3>
+                <p>Complete coverage across all areas</p>
+            </div>
+            <div class="location-card" data-aos="flip-left" data-aos-delay="200">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 class="serif-text">Barabanki</h3>
+                <p>Full service availability</p>
+            </div>
+            <div class="location-card" data-aos="flip-left" data-aos-delay="300">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3 class="serif-text">Nearby Districts</h3>
+                <p>Extended service areas</p>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="section-title">
-            <h2>Get In Touch</h2>
-            <p class="hindi-text">हमसे संपर्क करें</p>
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Get In Touch</h2>
+            <p class="subtitle hindi-text">हमसे संपर्क करें</p>
         </div>
         <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
+            <div class="contact-info" data-aos="fade-right">
+                <h3 class="serif-text">Contact Information</h3>
                 <div class="contact-item">
-                    <i class="fas fa-user"></i>
+                    <i class="fas fa-user-tie"></i>
                     <div>
-                        <strong>Rita Yadav</strong><br>
-                        Proprietor
+                        <strong>Mrs. Rita Yadav</strong><br>
+                        Proprietor<br>
+                        <span class="hindi-text">स्वामी</span>
                     </div>
                 </div>
                 <div class="contact-item">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone-alt"></i>
                     <div>
                         <a href="tel:+919451672350">+91-9451672350</a>
                     </div>
@@ -741,19 +1276,19 @@
                 </div>
             </div>
 
-            <div class="contact-form">
-                <h3>Send Us a Message</h3>
+            <div class="contact-form" data-aos="fade-left">
+                <h3 class="serif-text">Send Us a Message</h3>
                 <form action="https://formspree.io/f/xanyqjpb" method="POST">
                     <div class="form-group">
-                        <label for="name">Name *</label>
+                        <label for="name">Your Name *</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <label for="phone">Phone *</label>
+                        <label for="phone">Phone Number *</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Email Address</label>
                         <input type="email" id="email" name="email">
                     </div>
                     <div class="form-group">
@@ -761,8 +1296,8 @@
                         <input type="text" id="event" name="event" placeholder="Wedding, Birthday, Corporate Event, etc.">
                     </div>
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" required placeholder="Tell us about your event requirements..."></textarea>
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your event requirements, date, guest count, and any special requests..."></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary" style="width: 100%;">
                         <i class="fas fa-paper-plane"></i> Send Message
@@ -775,23 +1310,66 @@
     <!-- Footer -->
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">Khushi Tent House</div>
-            <p class="hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
-            <div class="social-links">
-                <a href="tel:+919451672350" title="Call Us"><i class="fas fa-phone"></i></a>
-                <a href="mailto:khushitenthouse124@gmail.com" title="Email Us"><i class="fas fa-envelope"></i></a>
-                <a href="https://instagram.com/khushitenthouse124" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://wa.me/919451672350" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <div class="footer-about">
+                <h3 class="serif-text">Khushi Tent House</h3>
+                <p class="hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
+                <p>Making your special moments unforgettable with premium wedding and event services in Lucknow and surrounding areas.</p>
+                <div class="social-links">
+                    <a href="tel:+919451672350" title="Call Us"><i class="fas fa-phone-alt"></i></a>
+                    <a href="mailto:khushitenthouse124@gmail.com" title="Email Us"><i class="fas fa-envelope"></i></a>
+                    <a href="https://instagram.com/khushitenthouse124" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919451672350" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Khushi Tent House. All Rights Reserved.</p>
-                <p>Vijayant Khand -1, Near Water Tank, Gomti Nagar, Lucknow</p>
+            <div class="footer-links">
+                <h4 class="serif-text">Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-contact">
+                <h4 class="serif-text">Contact</h4>
+                <p><i class="fas fa-phone-alt"></i> +91-9451672350</p>
+                <p><i class="fas fa-envelope"></i> khushitenthouse124@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Vijayant Khand -1, Near Water Tank, Gomti Nagar, Lucknow</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Khushi Tent House. All Rights Reserved. | Designed with ❤️ for your special moments</p>
         </div>
     </footer>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // Smooth scrolling for navigation links
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -805,26 +1383,28 @@
             });
         });
 
-        // Add animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Scroll to top button
+        const scrollTop = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                scrollTop.classList.add('active');
+            } else {
+                scrollTop.classList.remove('active');
+            }
+        });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
+        scrollTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
-        }, observerOptions);
+        });
 
-        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
+        // Form submission handling
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            // Form will be handled by Formspree
+            // You can add custom validation or success message here if needed
         });
     </script>
 </body>
