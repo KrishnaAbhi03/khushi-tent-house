@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khushi Tent House - Wedding & Event Services in Lucknow</title>
+    <meta name="description" content="Premium tent, decoration, catering and event setup services in Lucknow, Barabanki & nearby districts. Khushiyan Kare Dugni Khushi Tent House Sang">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-red: #C41E3A;
+            --primary-gold: #D4AF37;
+            --dark-gold: #B8941E;
+            --light-gold: #F4E4C1;
+            --white: #FFFFFF;
+            --cream: #FFF8F0;
+            --dark: #2C1810;
+            --shadow: rgba(196, 30, 58, 0.2);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hindi-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
+            color: var(--white);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px var(--shadow);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-gold);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 70px;
+            background: linear-gradient(rgba(196, 30, 58, 0.85), rgba(139, 0, 0, 0.85)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23C41E3A" width="1200" height="600"/><path fill="%23D4AF37" opacity="0.1" d="M0,300 Q300,200 600,300 T1200,300 L1200,600 L0,600 Z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="40" opacity="0.05" fill="%23D4AF37">✦</text></svg>') repeat;
+            animation: sparkle 20s linear infinite;
+        }
+
+        @keyframes sparkle {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100px); }
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-container {
+            margin-bottom: 2rem;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        .logo-container img {
+            max-width: 250px;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5));
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-gold);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease-out 0.2s both;
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeInDown 1s ease-out 0.4s both;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            animation: fadeInDown 1s ease-out 0.6s both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-gold), var(--dark-gold));
+            color: var(--dark);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-red);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(255,255,255,0.4);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: var(--primary-red);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-gold), var(--dark-gold));
+            border-radius: 2px;
+        }
+
+        .section-title p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .services-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-gold);
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--primary-red), #8B0000);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            box-shadow: 0 8px 20px var(--shadow);
+        }
+
+        .service-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Coverage Section */
+        .coverage {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #8B0000 100%);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .coverage h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-gold);
+        }
+
+        .locations {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .location-badge {
+            background: rgba(255,255,255,0.15);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border: 2px solid var(--primary-gold);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 5rem 2rem;
+            background: var(--white);
+        }
+
+        .testimonials-grid {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: var(--cream);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-gold);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .testimonial-card .stars {
+            color: var(--primary-gold);
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        .testimonial-card .author {
+            font-weight: 600;
+            color: var(--primary-red);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 2rem;
+            background: var(--cream);
+        }
+
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .contact-info {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-item i {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            margin-top: 0.2rem;
+        }
+
+        .contact-item a {
+            color: var(--dark);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary-red);
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-red);
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-gold);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, var(--dark) 0%, #1a0f08 100%);
+            color: var(--white);
+            padding: 3rem 2rem 1.5rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--primary-gold);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-red);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--primary-gold);
+            color: var(--dark);
+            transform: translateY(-5px);
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .tagline {
+                font-size: 1.3rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+
+        /* Decorative Elements */
+        .mandala-decoration {
+            position: absolute;
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .mandala-left {
+            top: 20%;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23D4AF37" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23D4AF37" stroke-width="1"/></svg>') no-repeat center;
+        }
+
+        .mandala-right {
+            bottom: 20%;
+            right: -100px;
+            width: 300px;
+            height: 300px;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="%23D4AF37" stroke-width="2"/><circle cx="50" cy="50" r="30" fill="none" stroke="%23D4AF37" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="%23D4AF37" stroke-width="1"/></svg>') no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo-text">Khushi Tent House</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="mandala-decoration mandala-left"></div>
+        <div class="mandala-decoration mandala-right"></div>
+        <div class="hero-content">
+            <div class="logo-container">
+                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House Logo">
+            </div>
+            <h1>Khushi Tent House</h1>
+            <p class="tagline hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
+            <p>Premium Wedding & Event Services in Lucknow</p>
+            <div class="cta-buttons">
+                <a href="tel:+919451672350" class="btn btn-primary">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-calendar-check"></i> Book Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="section-title">
+            <h2>Our Services</h2>
+            <p class="hindi-text">हमारी सेवाएं</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-campground"></i>
+                </div>
+                <h3>Tent Services</h3>
+                <p>Premium quality tents for all occasions. From intimate gatherings to grand celebrations, we provide elegant tent solutions with perfect setup.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <h3>Decoration</h3>
+                <p>Stunning decorations that transform your venue. Traditional and contemporary designs with beautiful floral arrangements and lighting.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>Catering</h3>
+                <p>Delicious multi-cuisine catering services. From traditional Indian delicacies to international flavors, we serve excellence on every plate.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-rings-wedding"></i>
+                </div>
+                <h3>Wedding Setup</h3>
+                <p>Complete wedding planning and execution. We handle everything from mandap decoration to guest seating, making your special day perfect.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Section -->
+    <section class="coverage">
+        <h2>Service Coverage</h2>
+        <p class="hindi-text">हम यहाँ सेवा प्रदान करते हैं</p>
+        <div class="locations">
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt"></i> Lucknow
+            </div>
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt"></i> Barabanki
+            </div>
+            <div class="location-badge">
+                <i class="fas fa-map-marker-alt"></i> Nearby Districts
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="section-title">
+            <h2>What Our Clients Say</h2>
+            <p class="hindi-text">हमारे ग्राहकों की राय</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Khushi Tent House made our wedding absolutely magical! The decoration was breathtaking and the catering was exceptional. Rita ji and her team handled everything professionally."</p>
+                <div class="author">- Priya & Rahul Sharma</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Outstanding service! From tent setup to food arrangements, everything was perfect. Highly recommend for any event in Lucknow. Very professional and courteous team."</p>
+                <div class="author">- Amit Verma</div>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Best tent house in Lucknow! They transformed our venue beautifully. The attention to detail and quality of service exceeded our expectations. Thank you Rita ji!"</p>
+                <div class="author">- Neha Gupta</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="section-title">
+            <h2>Get In Touch</h2>
+            <p class="hindi-text">हमसे संपर्क करें</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <div class="contact-item">
+                    <i class="fas fa-user"></i>
+                    <div>
+                        <strong>Rita Yadav</strong><br>
+                        Proprietor
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <a href="tel:+919451672350">+91-9451672350</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <a href="mailto:khushitenthouse124@gmail.com">khushitenthouse124@gmail.com</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <div>
+                        <a href="https://instagram.com/khushitenthouse124" target="_blank">@khushitenthouse124</a>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        Vijayant Khand -1, Near Water Tank,<br>
+                        Gomti Nagar, Lucknow
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-form">
+                <h3>Send Us a Message</h3>
+                <form action="https://formspree.io/f/xanyqjpb" method="POST">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="event">Event Type</label>
+                        <input type="text" id="event" name="event" placeholder="Wedding, Birthday, Corporate Event, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Tell us about your event requirements..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">Khushi Tent House</div>
+            <p class="hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
+            <div class="social-links">
+                <a href="tel:+919451672350" title="Call Us"><i class="fas fa-phone"></i></a>
+                <a href="mailto:khushitenthouse124@gmail.com" title="Email Us"><i class="fas fa-envelope"></i></a>
+                <a href="https://instagram.com/khushitenthouse124" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/919451672350" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Khushi Tent House. All Rights Reserved.</p>
+                <p>Vijayant Khand -1, Near Water Tank, Gomti Nagar, Lucknow</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
