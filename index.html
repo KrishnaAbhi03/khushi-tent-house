@@ -16,15 +16,15 @@
         }
 
         :root {
-            --primary-red: #B8001F;
+            --brand-gold: #baa100;
+            --brand-brown: #814406;
+            --brand-white: #ffffff;
+            --brand-black: #000000;
+            --accent-red: #B8001F;
             --deep-red: #8B0000;
-            --primary-gold: #D4AF37;
-            --rich-gold: #C5A028;
-            --light-gold: #F5E6D3;
-            --white: #FFFFFF;
             --cream: #FFF9F0;
-            --dark: #1A1A1A;
             --gray: #666666;
+            --light-gray: #f5f5f5;
         }
 
         html {
@@ -33,7 +33,7 @@
 
         body {
             font-family: 'Montserrat', sans-serif;
-            color: var(--dark);
+            color: var(--brand-black);
             line-height: 1.7;
             overflow-x: hidden;
         }
@@ -52,15 +52,15 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            background: rgba(26, 26, 26, 0.95);
+            background: rgba(0, 0, 0, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
             transition: all 0.3s ease;
         }
 
         header.scrolled {
-            background: rgba(26, 26, 26, 0.98);
-            box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+            background: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 4px 30px rgba(0,0,0,0.4);
         }
 
         nav {
@@ -69,7 +69,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 3rem;
+            padding: 0.8rem 3rem;
         }
 
         .logo-container {
@@ -79,7 +79,7 @@
         }
 
         .logo-container img {
-            height: 60px;
+            height: 55px;
             width: auto;
             transition: transform 0.3s ease;
         }
@@ -92,7 +92,7 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             letter-spacing: 1px;
         }
 
@@ -103,7 +103,7 @@
         }
 
         .nav-links a {
-            color: var(--white);
+            color: var(--brand-white);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -119,7 +119,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-gold);
+            background: var(--brand-gold);
             transition: width 0.3s;
         }
 
@@ -128,20 +128,20 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-gold);
+            color: var(--brand-gold);
         }
 
         /* Hero Section */
         .hero {
-            margin-top: 80px;
+            margin-top: 70px;
             min-height: 100vh;
-            background: linear-gradient(rgba(184, 0, 31, 0.7), rgba(139, 0, 0, 0.8)), 
+            background: linear-gradient(rgba(129, 68, 6, 0.6), rgba(139, 0, 0, 0.7)), 
                         url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            color: var(--white);
+            color: var(--brand-white);
             position: relative;
             overflow: hidden;
         }
@@ -153,7 +153,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23D4AF37" opacity="0.3"/></svg>') repeat;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="1" fill="%23baa100" opacity="0.3"/></svg>') repeat;
             animation: sparkle 30s linear infinite;
             pointer-events: none;
         }
@@ -170,43 +170,32 @@
             z-index: 1;
         }
 
-        .hero-logo {
-            margin-bottom: 2rem;
-            animation: fadeInDown 1s ease-out;
-        }
-
-        .hero-logo img {
-            max-width: 280px;
-            height: auto;
-            filter: drop-shadow(0 15px 40px rgba(0,0,0,0.6));
-        }
-
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4.5rem;
+            font-size: 5rem;
             font-weight: 700;
             margin-bottom: 1.5rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
-            letter-spacing: 2px;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            letter-spacing: 3px;
+            animation: fadeInUp 1s ease-out;
         }
 
         .hero-tagline {
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
             font-weight: 600;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
-            animation: fadeInUp 1s ease-out 0.4s both;
+            animation: fadeInUp 1s ease-out 0.2s both;
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             margin-bottom: 3rem;
             opacity: 0.95;
             font-weight: 400;
             letter-spacing: 1px;
-            animation: fadeInUp 1s ease-out 0.6s both;
+            animation: fadeInUp 1s ease-out 0.4s both;
         }
 
         .hero-cta {
@@ -214,7 +203,7 @@
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
-            animation: fadeInUp 1s ease-out 0.8s both;
+            animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn {
@@ -234,24 +223,24 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary-gold), var(--rich-gold));
-            color: var(--dark);
+            background: linear-gradient(135deg, var(--brand-gold), var(--brand-brown));
+            color: var(--brand-white);
         }
 
         .btn-primary:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.5);
+            box-shadow: 0 15px 40px rgba(186, 161, 0, 0.5);
         }
 
         .btn-secondary {
             background: transparent;
-            color: var(--white);
-            border: 2px solid var(--white);
+            color: var(--brand-white);
+            border: 2px solid var(--brand-white);
         }
 
         .btn-secondary:hover {
-            background: var(--white);
-            color: var(--primary-red);
+            background: var(--brand-white);
+            color: var(--brand-brown);
             transform: translateY(-5px);
             box-shadow: 0 15px 40px rgba(255,255,255,0.3);
         }
@@ -260,17 +249,6 @@
             from {
                 opacity: 0;
                 transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-40px);
             }
             to {
                 opacity: 1;
@@ -310,7 +288,7 @@
             left: -20px;
             width: 100%;
             height: 100%;
-            border: 3px solid var(--primary-gold);
+            border: 3px solid var(--brand-gold);
             border-radius: 20px;
             z-index: -1;
         }
@@ -318,13 +296,13 @@
         .about-content h2 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 3rem;
-            color: var(--primary-red);
+            color: var(--brand-brown);
             margin-bottom: 1rem;
         }
 
         .about-content .subtitle {
             font-size: 1.3rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             margin-bottom: 2rem;
             font-weight: 600;
         }
@@ -339,13 +317,13 @@
         .proprietor {
             margin-top: 2rem;
             padding: 1.5rem;
-            background: var(--white);
-            border-left: 4px solid var(--primary-gold);
+            background: var(--brand-white);
+            border-left: 4px solid var(--brand-gold);
             border-radius: 10px;
         }
 
         .proprietor strong {
-            color: var(--primary-red);
+            color: var(--brand-brown);
             font-size: 1.2rem;
         }
 
@@ -358,7 +336,7 @@
         .section-title h2 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 3.5rem;
-            color: var(--primary-red);
+            color: var(--brand-brown);
             margin-bottom: 0.5rem;
             position: relative;
             display: inline-block;
@@ -372,7 +350,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 4px;
-            background: linear-gradient(90deg, var(--primary-gold), var(--rich-gold));
+            background: linear-gradient(90deg, var(--brand-gold), var(--brand-brown));
             border-radius: 2px;
         }
 
@@ -385,7 +363,7 @@
         /* Services Section */
         .services {
             padding: 6rem 2rem;
-            background: var(--white);
+            background: var(--brand-white);
         }
 
         .services-grid {
@@ -414,7 +392,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(186, 161, 0, 0.1), transparent);
             transition: left 0.6s;
         }
 
@@ -424,22 +402,22 @@
 
         .service-card:hover {
             transform: translateY(-15px);
-            border-color: var(--primary-gold);
-            box-shadow: 0 20px 50px rgba(184, 0, 31, 0.15);
+            border-color: var(--brand-gold);
+            box-shadow: 0 20px 50px rgba(129, 68, 6, 0.2);
         }
 
         .service-icon {
             width: 100px;
             height: 100px;
             margin: 0 auto 2rem;
-            background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
+            background: linear-gradient(135deg, var(--brand-brown), var(--accent-red));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3rem;
-            color: var(--primary-gold);
-            box-shadow: 0 10px 30px rgba(184, 0, 31, 0.3);
+            color: var(--brand-gold);
+            box-shadow: 0 10px 30px rgba(129, 68, 6, 0.3);
             transition: all 0.4s;
         }
 
@@ -450,7 +428,7 @@
         .service-card h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            color: var(--primary-red);
+            color: var(--brand-brown);
             margin-bottom: 1rem;
             font-weight: 700;
         }
@@ -461,83 +439,27 @@
             font-size: 1rem;
         }
 
-        /* Why Choose Us */
-        .why-choose {
-            padding: 6rem 2rem;
-            background: linear-gradient(135deg, var(--primary-red) 0%, var(--deep-red) 100%);
-            color: var(--white);
-        }
-
-        .why-choose .section-title h2 {
-            color: var(--primary-gold);
-        }
-
-        .why-choose .section-title .subtitle {
-            color: rgba(255,255,255,0.9);
-        }
-
-        .features-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255,255,255,0.1);
-            border-radius: 15px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
-            transition: all 0.3s;
-        }
-
-        .feature-card:hover {
-            background: rgba(255,255,255,0.15);
-            transform: translateY(-10px);
-        }
-
-        .feature-icon {
-            font-size: 4rem;
-            color: var(--primary-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .feature-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary-gold);
-        }
-
-        .feature-card p {
-            line-height: 1.8;
-            opacity: 0.95;
-        }
-
         /* Gallery Section */
         .gallery {
             padding: 6rem 2rem;
-            background: var(--cream);
+            background: var(--light-gray);
         }
 
         .gallery-grid {
-            max-width: 1300px;
+            max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
         }
 
         .gallery-item {
             position: relative;
             overflow: hidden;
             border-radius: 15px;
-            height: 350px;
+            height: 400px;
             cursor: pointer;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
         }
 
         .gallery-item img {
@@ -556,7 +478,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(184, 0, 31, 0.9), transparent);
+            background: linear-gradient(to top, rgba(129, 68, 6, 0.9), transparent);
             padding: 2rem;
             transform: translateY(100%);
             transition: transform 0.4s;
@@ -569,13 +491,13 @@
         .gallery-overlay h4 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
         }
 
         /* Testimonials */
         .testimonials {
             padding: 6rem 2rem;
-            background: var(--white);
+            background: var(--brand-white);
         }
 
         .testimonials-grid {
@@ -597,12 +519,12 @@
 
         .testimonial-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(184, 0, 31, 0.15);
+            box-shadow: 0 15px 40px rgba(129, 68, 6, 0.2);
         }
 
         .quote-icon {
             font-size: 4rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             opacity: 0.3;
             position: absolute;
             top: 20px;
@@ -610,7 +532,7 @@
         }
 
         .stars {
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             font-size: 1.3rem;
             margin-bottom: 1.5rem;
         }
@@ -633,18 +555,18 @@
         .author-avatar {
             width: 60px;
             height: 60px;
-            background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
+            background: linear-gradient(135deg, var(--brand-brown), var(--accent-red));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             font-size: 1.5rem;
             font-weight: 700;
         }
 
         .author-info h4 {
-            color: var(--primary-red);
+            color: var(--brand-brown);
             font-weight: 600;
             margin-bottom: 0.3rem;
         }
@@ -671,7 +593,7 @@
         }
 
         .location-card {
-            background: var(--white);
+            background: var(--brand-white);
             padding: 2rem 3rem;
             border-radius: 15px;
             text-align: center;
@@ -681,21 +603,21 @@
         }
 
         .location-card:hover {
-            border-color: var(--primary-gold);
+            border-color: var(--brand-gold);
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(184, 0, 31, 0.2);
+            box-shadow: 0 15px 40px rgba(129, 68, 6, 0.2);
         }
 
         .location-card i {
             font-size: 3rem;
-            color: var(--primary-red);
+            color: var(--brand-brown);
             margin-bottom: 1rem;
         }
 
         .location-card h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            color: var(--primary-red);
+            color: var(--brand-brown);
             margin-bottom: 0.5rem;
         }
 
@@ -706,7 +628,7 @@
         /* Contact Section */
         .contact {
             padding: 6rem 2rem;
-            background: var(--white);
+            background: var(--brand-white);
         }
 
         .contact-container {
@@ -718,16 +640,16 @@
         }
 
         .contact-info {
-            background: linear-gradient(135deg, var(--primary-red), var(--deep-red));
+            background: linear-gradient(135deg, var(--brand-brown), var(--accent-red));
             padding: 3rem;
             border-radius: 20px;
-            color: var(--white);
+            color: var(--brand-white);
         }
 
         .contact-info h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             margin-bottom: 2rem;
         }
 
@@ -744,18 +666,18 @@
 
         .contact-item i {
             font-size: 2rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             margin-top: 0.3rem;
         }
 
         .contact-item a {
-            color: var(--white);
+            color: var(--brand-white);
             text-decoration: none;
             transition: color 0.3s;
         }
 
         .contact-item a:hover {
-            color: var(--primary-gold);
+            color: var(--brand-gold);
         }
 
         .contact-form {
@@ -767,7 +689,7 @@
         .contact-form h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.5rem;
-            color: var(--primary-red);
+            color: var(--brand-brown);
             margin-bottom: 2rem;
         }
 
@@ -779,7 +701,7 @@
             display: block;
             margin-bottom: 0.7rem;
             font-weight: 600;
-            color: var(--dark);
+            color: var(--brand-black);
         }
 
         .form-group input,
@@ -796,8 +718,8 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary-gold);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+            border-color: var(--brand-gold);
+            box-shadow: 0 0 0 3px rgba(186, 161, 0, 0.1);
         }
 
         .form-group textarea {
@@ -807,8 +729,8 @@
 
         /* Footer */
         footer {
-            background: linear-gradient(135deg, var(--dark) 0%, #0a0a0a 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, var(--brand-black) 0%, #1a1a1a 100%);
+            color: var(--brand-white);
             padding: 4rem 2rem 2rem;
         }
 
@@ -824,7 +746,7 @@
         .footer-about h3 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             margin-bottom: 1rem;
         }
 
@@ -838,7 +760,7 @@
         .footer-contact h4 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.5rem;
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             margin-bottom: 1.5rem;
         }
 
@@ -855,7 +777,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--primary-gold);
+            color: var(--brand-gold);
             padding-left: 10px;
         }
 
@@ -868,7 +790,7 @@
         }
 
         .footer-contact i {
-            color: var(--primary-gold);
+            color: var(--brand-gold);
         }
 
         .social-links {
@@ -880,19 +802,19 @@
         .social-links a {
             width: 50px;
             height: 50px;
-            background: var(--primary-red);
+            background: var(--brand-brown);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--white);
+            color: var(--brand-white);
             font-size: 1.3rem;
             transition: all 0.3s;
         }
 
         .social-links a:hover {
-            background: var(--primary-gold);
-            color: var(--dark);
+            background: var(--brand-gold);
+            color: var(--brand-black);
             transform: translateY(-5px);
         }
 
@@ -901,6 +823,37 @@
             padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: rgba(255,255,255,0.6);
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--brand-gold), var(--brand-brown));
+            color: var(--brand-white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
         }
 
         /* Responsive */
@@ -912,6 +865,10 @@
 
             .footer-content {
                 grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -939,37 +896,14 @@
             .about-image::before {
                 display: none;
             }
-        }
 
-        /* Scroll to top button */
-        .scroll-top {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--primary-gold), var(--rich-gold));
-            color: var(--dark);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            cursor: pointer;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-            z-index: 999;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
-        }
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
 
-        .scroll-top.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .scroll-top:hover {
-            transform: translateY(-5px);
+            .gallery-item {
+                height: 350px;
+            }
         }
     </style>
 </head>
@@ -978,7 +912,7 @@
     <header id="header">
         <nav>
             <div class="logo-container">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House Logo">
+                <img src="https://i.ibb.co/9hLQjYy/khushi-tent-logo-transparent.png" alt="Khushi Tent House Logo">
                 <span class="logo-text">Khushi Tent House</span>
             </div>
             <ul class="nav-links">
@@ -995,9 +929,6 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <div class="hero-logo">
-                <img src="https://nyc3.digitaloceanspaces.com/bhindi-drive/files/b92d43e3-7cc7-4ccb-8112-b2407caba2a3/2025-12-09T10-50-57-053Z-61850deb-chat-image-1765277457033-0.jpg" alt="Khushi Tent House">
-            </div>
             <h1 class="serif-text">Khushi Tent House</h1>
             <p class="hero-tagline hindi-text">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
             <p class="hero-subtitle">Premium Wedding & Event Services in Lucknow</p>
@@ -1043,7 +974,7 @@
                 <div class="service-icon">
                     <i class="fas fa-campground"></i>
                 </div>
-                <h3 class="serif-text">Wedding Tent Setup</h3>
+                <h3 class="serif-text">Tent Services</h3>
                 <p>Premium quality tents with elegant designs for weddings and grand celebrations. Complete setup with proper lighting and ventilation systems.</p>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="200">
@@ -1055,17 +986,17 @@
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                 <div class="service-icon">
-                    <i class="fas fa-utensils"></i>
-                </div>
-                <h3 class="serif-text">Catering Services</h3>
-                <p>Multi-cuisine catering with authentic flavors. From traditional Indian delicacies to international cuisines, served with excellence.</p>
-            </div>
-            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="service-icon">
                     <i class="fas fa-lightbulb"></i>
                 </div>
                 <h3 class="serif-text">Lighting Solutions</h3>
                 <p>Professional lighting setups including decorative lights, spotlights, and ambient lighting to create the perfect atmosphere.</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3 class="serif-text">Catering Services</h3>
+                <p>Multi-cuisine catering with authentic flavors. From traditional Indian delicacies to international cuisines, served with excellence.</p>
             </div>
             <div class="service-card" data-aos="fade-up" data-aos-delay="500">
                 <div class="service-icon">
@@ -1080,37 +1011,6 @@
                 </div>
                 <h3 class="serif-text">Event Arrangements</h3>
                 <p>Complete event management for parties, corporate events, and celebrations. End-to-end planning and execution.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us -->
-    <section class="why-choose">
-        <div class="section-title" data-aos="fade-up">
-            <h2 class="serif-text">Why Choose Us?</h2>
-            <p class="subtitle hindi-text">हमें क्यों चुनें?</p>
-        </div>
-        <div class="features-grid">
-            <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
-                <div class="feature-icon">
-                    <i class="fas fa-award"></i>
-                </div>
-                <h3 class="serif-text">Premium Quality</h3>
-                <p>We use only the finest materials and decorations to ensure your event looks spectacular. Quality is our top priority in everything we do.</p>
-            </div>
-            <div class="feature-card" data-aos="zoom-in" data-aos-delay="200">
-                <div class="feature-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3 class="serif-text">Experienced Team</h3>
-                <p>Our skilled professionals have years of experience in creating memorable events. We handle every detail with expertise and care.</p>
-            </div>
-            <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
-                <div class="feature-icon">
-                    <i class="fas fa-handshake"></i>
-                </div>
-                <h3 class="serif-text">Service Assurance</h3>
-                <p>We guarantee timely delivery and flawless execution. Your satisfaction is our commitment, and we stand by our promises.</p>
             </div>
         </div>
     </section>
@@ -1398,13 +1298,6 @@
                 top: 0,
                 behavior: 'smooth'
             });
-        });
-
-        // Form submission handling
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            // Form will be handled by Formspree
-            // You can add custom validation or success message here if needed
         });
     </script>
 </body>
