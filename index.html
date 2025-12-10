@@ -545,6 +545,281 @@
             gap: 0.8rem;
         }
 
+        /* Full Blog Section - NEW */
+        .blog-section {
+            padding: 4rem 1.5rem;
+            background: var(--brand-white);
+        }
+
+        .blog-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            gap: 3rem;
+        }
+
+        .blog-main {
+            width: 100%;
+        }
+
+        .blog-post {
+            background: var(--cream);
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+        }
+
+        .blog-post:hover {
+            box-shadow: 0 15px 40px rgba(129, 68, 6, 0.15);
+        }
+
+        .blog-post-image {
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .blog-post-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-post-content {
+            padding: 2.5rem;
+        }
+
+        .blog-post-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .blog-post-date {
+            color: var(--brand-gold);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-post-category {
+            background: var(--brand-brown);
+            color: var(--brand-white);
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .blog-post-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 3vw, 2.5rem);
+            color: var(--brand-brown);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .blog-post-excerpt {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-full {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .blog-post-full.active {
+            max-height: 5000px;
+        }
+
+        .blog-post-full p {
+            color: var(--gray);
+            line-height: 1.9;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-full h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brand-brown);
+            margin: 2rem 0 1rem;
+            font-weight: 700;
+        }
+
+        .blog-post-full ul {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-post-full li {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 0.8rem;
+        }
+
+        .blog-toggle-btn {
+            background: linear-gradient(135deg, var(--brand-gold), var(--brand-brown));
+            color: var(--brand-white);
+            border: none;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-toggle-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(186, 161, 0, 0.4);
+        }
+
+        /* Blog Sidebar - NEW */
+        .blog-sidebar {
+            width: 100%;
+        }
+
+        .sidebar-widget {
+            background: var(--cream);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .sidebar-widget h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--brand-brown);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .blog-search {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .blog-search input {
+            flex: 1;
+            padding: 0.9rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .blog-search input:focus {
+            outline: none;
+            border-color: var(--brand-gold);
+        }
+
+        .blog-search button {
+            background: var(--brand-brown);
+            color: var(--brand-white);
+            border: none;
+            padding: 0.9rem 1.5rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .blog-search button:hover {
+            background: var(--brand-gold);
+            color: var(--brand-black);
+        }
+
+        .blog-categories {
+            list-style: none;
+        }
+
+        .blog-categories li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .blog-categories li:last-child {
+            border-bottom: none;
+        }
+
+        .blog-categories a {
+            color: var(--gray);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .blog-categories a:hover {
+            color: var(--brand-gold);
+            padding-left: 10px;
+        }
+
+        .category-count {
+            background: var(--brand-gold);
+            color: var(--brand-white);
+            padding: 0.2rem 0.6rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .comment-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .comment-form input,
+        .comment-form textarea {
+            padding: 0.9rem;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s;
+        }
+
+        .comment-form input:focus,
+        .comment-form textarea:focus {
+            outline: none;
+            border-color: var(--brand-gold);
+        }
+
+        .comment-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .comment-submit {
+            background: linear-gradient(135deg, var(--brand-gold), var(--brand-brown));
+            color: var(--brand-white);
+            border: none;
+            padding: 0.9rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .comment-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(186, 161, 0, 0.4);
+        }
+
         /* Gallery Section */
         .gallery {
             padding: 4rem 1.5rem;
@@ -996,6 +1271,14 @@
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+
+            .blog-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-sidebar {
+                order: 2;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1047,6 +1330,10 @@
                 width: 45px;
                 height: 45px;
             }
+
+            .blog-post-image {
+                height: 250px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1068,6 +1355,14 @@
             .contact-form {
                 padding: 1.5rem;
             }
+
+            .blog-post-content {
+                padding: 1.5rem;
+            }
+
+            .sidebar-widget {
+                padding: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -1083,7 +1378,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="blogs.html">Blog</a></li>
+                <li><a href="#blog">Blog</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1183,7 +1478,7 @@
         </div>
     </section>
 
-    <!-- Blog Preview Section - NEW -->
+    <!-- Blog Preview Section -->
     <section class="blog-preview">
         <div class="section-title" data-aos="fade-up">
             <h2 class="serif-text">Latest from Our Blog</h2>
@@ -1200,8 +1495,8 @@
                     </div>
                     <h3>Top Wedding Decoration Trends for 2025</h3>
                     <p>Discover the hottest wedding decoration trends that will make your 2025 celebration unforgettable. From sustainable décor to bold color palettes...</p>
-                    <a href="blogs.html#blog1" class="blog-read-more">
-                        Read More <i class="fas fa-arrow-right"></i>
+                    <a href="#blog" class="blog-read-more">
+                        Read Full Article <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -1215,8 +1510,8 @@
                     </div>
                     <h3>How to Choose the Perfect Tent House for Your Event</h3>
                     <p>Planning an outdoor event? Learn the essential factors to consider when selecting a tent house service that matches your vision and budget...</p>
-                    <a href="blogs.html#blog2" class="blog-read-more">
-                        Read More <i class="fas fa-arrow-right"></i>
+                    <a href="#blog" class="blog-read-more">
+                        Read Full Article <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
@@ -1230,11 +1525,244 @@
                     </div>
                     <h3>Khushi Tent House: Making Your Celebrations Grand</h3>
                     <p>Explore how Khushi Tent House has been transforming ordinary events into extraordinary celebrations with premium services and attention to detail...</p>
-                    <a href="blogs.html#blog3" class="blog-read-more">
-                        Read More <i class="fas fa-arrow-right"></i>
+                    <a href="#blog" class="blog-read-more">
+                        Read Full Article <i class="fas fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Full Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Our Blog</h2>
+            <p class="subtitle hindi-text">हमारे ब्लॉग</p>
+        </div>
+        <div class="blog-container">
+            <!-- Blog Main Content -->
+            <div class="blog-main">
+                <!-- Blog Post 1 -->
+                <article class="blog-post" data-aos="fade-up">
+                    <div class="blog-post-image">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" alt="Wedding Decoration Trends 2025">
+                    </div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-post-date">
+                                <i class="far fa-calendar-alt"></i> December 8, 2024
+                            </span>
+                            <span class="blog-post-category">Wedding Trends</span>
+                        </div>
+                        <h2>Top Wedding Decoration Trends for 2025</h2>
+                        <p class="blog-post-excerpt">As we step into 2025, wedding decoration trends are evolving with a perfect blend of tradition and modernity. Couples are seeking unique ways to make their special day memorable while staying true to their cultural roots.</p>
+                        
+                        <div class="blog-post-full">
+                            <p>The wedding industry is witnessing a remarkable transformation in 2025, with couples increasingly opting for personalized and sustainable decoration choices. From eco-friendly materials to technology-integrated setups, the trends are as diverse as they are beautiful.</p>
+                            
+                            <h3>1. Sustainable and Eco-Friendly Décor</h3>
+                            <p>Environmental consciousness is at the forefront of wedding planning in 2025. Couples are choosing biodegradable materials, potted plants instead of cut flowers, and reusable decorations. This not only reduces waste but also creates a natural, organic aesthetic that's both beautiful and responsible.</p>
+                            
+                            <h3>2. Bold Color Palettes</h3>
+                            <p>Gone are the days of playing it safe with pastels. 2025 weddings are embracing rich, vibrant colors like deep burgundy, emerald green, royal blue, and burnt orange. These bold choices create stunning visual impact and photograph beautifully, especially when combined with traditional gold accents.</p>
+                            
+                            <h3>3. Personalized Installations</h3>
+                            <p>Custom installations that tell the couple's love story are becoming increasingly popular. From photo walls featuring their journey together to personalized neon signs and custom backdrops, these elements add a unique touch that guests will remember long after the celebration ends.</p>
+                            
+                            <h3>4. Fusion of Traditional and Modern</h3>
+                            <p>Indian weddings in 2025 are beautifully blending traditional elements with contemporary design. Think classic marigold flowers arranged in modern geometric patterns, traditional diyas paired with LED lighting, and heritage textiles used in innovative ways.</p>
+                            
+                            <ul>
+                                <li><strong>Floral Ceilings:</strong> Suspended floral installations creating magical overhead canopies</li>
+                                <li><strong>Statement Lighting:</strong> Dramatic chandeliers and fairy lights creating ambiance</li>
+                                <li><strong>Minimalist Elegance:</strong> Less is more with clean lines and sophisticated simplicity</li>
+                                <li><strong>Interactive Elements:</strong> Photo booths, live art, and entertainment zones</li>
+                                <li><strong>Luxury Fabrics:</strong> Velvet, silk, and brocade adding richness to the décor</li>
+                            </ul>
+                            
+                            <p>At Khushi Tent House, we stay ahead of these trends to ensure your wedding reflects the latest styles while maintaining timeless elegance. Our expert team works closely with you to bring your vision to life, whether you prefer traditional grandeur or contemporary chic.</p>
+                        </div>
+                        
+                        <button class="blog-toggle-btn" onclick="toggleBlog(this)">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-post" data-aos="fade-up">
+                    <div class="blog-post-image">
+                        <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069" alt="Choosing Perfect Tent House">
+                    </div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-post-date">
+                                <i class="far fa-calendar-alt"></i> December 5, 2024
+                            </span>
+                            <span class="blog-post-category">Event Planning</span>
+                        </div>
+                        <h2>How to Choose the Perfect Tent House for Your Event</h2>
+                        <p class="blog-post-excerpt">Selecting the right tent house service can make or break your outdoor event. With so many options available, it's essential to know what to look for to ensure your celebration is both beautiful and comfortable.</p>
+                        
+                        <div class="blog-post-full">
+                            <p>Planning an outdoor event requires careful consideration of numerous factors, and choosing the right tent house service is paramount to your event's success. Whether it's a wedding, corporate gathering, or family celebration, the tent house you select will significantly impact your guests' experience.</p>
+                            
+                            <h3>Key Factors to Consider</h3>
+                            
+                            <p><strong>1. Experience and Reputation:</strong> Look for a tent house service with a proven track record. Check reviews, ask for references, and view their portfolio of past events. An experienced provider like Khushi Tent House brings invaluable expertise in handling various event types and sizes.</p>
+                            
+                            <p><strong>2. Quality of Materials:</strong> The quality of tents, furniture, and decorative elements directly affects your event's appearance and safety. Inspect the materials beforehand – they should be clean, well-maintained, and weather-resistant. Premium fabrics and sturdy structures ensure your event proceeds smoothly regardless of weather conditions.</p>
+                            
+                            <p><strong>3. Range of Services:</strong> A comprehensive tent house service should offer more than just tents. Look for providers who can handle lighting, flooring, climate control, furniture, and decoration. This one-stop solution simplifies coordination and ensures cohesive design.</p>
+                            
+                            <h3>Essential Questions to Ask</h3>
+                            <ul>
+                                <li>What is the maximum capacity of your tents?</li>
+                                <li>Do you provide climate control (heating/cooling)?</li>
+                                <li>What backup plans do you have for extreme weather?</li>
+                                <li>Can you accommodate special requests or custom designs?</li>
+                                <li>What is included in your package pricing?</li>
+                                <li>Do you handle permits and site inspections?</li>
+                                <li>What is your setup and breakdown timeline?</li>
+                            </ul>
+                            
+                            <p><strong>4. Customization Options:</strong> Your event should reflect your personal style. Choose a service that offers customization in terms of tent styles, color schemes, lighting options, and decorative elements. The ability to tailor the setup to your vision is crucial for creating a memorable experience.</p>
+                            
+                            <p><strong>5. Budget Transparency:</strong> Request detailed quotes that break down all costs. Be wary of hidden fees for delivery, setup, breakdown, or additional services. A reputable provider will offer transparent pricing and work within your budget to deliver maximum value.</p>
+                            
+                            <p><strong>6. Safety and Insurance:</strong> Ensure the tent house service carries proper insurance and follows safety regulations. They should conduct site inspections, secure permits when necessary, and have contingency plans for emergencies.</p>
+                            
+                            <p>At Khushi Tent House, we pride ourselves on meeting all these criteria and more. Our team of professionals works closely with you from initial consultation to event completion, ensuring every detail is perfect. We understand that your event is unique, and we're committed to making it extraordinary.</p>
+                        </div>
+                        
+                        <button class="blog-toggle-btn" onclick="toggleBlog(this)">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-post" data-aos="fade-up">
+                    <div class="blog-post-image">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069" alt="Khushi Tent House Services">
+                    </div>
+                    <div class="blog-post-content">
+                        <div class="blog-post-meta">
+                            <span class="blog-post-date">
+                                <i class="far fa-calendar-alt"></i> December 1, 2024
+                            </span>
+                            <span class="blog-post-category">Company News</span>
+                        </div>
+                        <h2>Khushi Tent House: Making Your Celebrations Grand</h2>
+                        <p class="blog-post-excerpt">For years, Khushi Tent House has been the trusted name in Lucknow and surrounding areas for creating unforgettable celebrations. Our commitment to quality, innovation, and customer satisfaction sets us apart in the event industry.</p>
+                        
+                        <div class="blog-post-full">
+                            <p>At Khushi Tent House, we believe that every celebration deserves to be extraordinary. Under the leadership of Mrs. Rita Yadav, our team has transformed countless events into cherished memories, earning the trust and loyalty of families across Lucknow, Barabanki, and nearby districts.</p>
+                            
+                            <h3>Our Journey and Values</h3>
+                            <p>What started as a small tent house service has grown into a comprehensive event management company, thanks to our unwavering commitment to excellence. We understand that your celebration is more than just an event – it's a milestone in your life story, and we're honored to be part of it.</p>
+                            
+                            <p>Our success is built on three fundamental pillars: Quality, Trust, and Innovation. Every tent we erect, every decoration we create, and every service we provide reflects these core values. We don't just meet expectations; we exceed them.</p>
+                            
+                            <h3>Comprehensive Services</h3>
+                            <p><strong>Premium Tent Solutions:</strong> Our extensive inventory includes tents of various sizes and styles, from traditional shamiana to modern marquees. Each tent is meticulously maintained and can be customized to match your event's theme and requirements.</p>
+                            
+                            <p><strong>Exquisite Decoration:</strong> Our creative team specializes in transforming spaces into magical venues. Whether you envision a traditional Indian wedding setup or a contemporary celebration, we bring your dreams to life with attention to every detail.</p>
+                            
+                            <p><strong>Professional Lighting:</strong> Lighting sets the mood for your celebration. Our state-of-the-art lighting solutions range from elegant chandeliers to dynamic LED systems, creating the perfect ambiance for every moment of your event.</p>
+                            
+                            <p><strong>Gourmet Catering:</strong> We partner with the finest caterers to offer diverse menu options that cater to all tastes and dietary requirements. From traditional Indian cuisine to international delicacies, we ensure your guests enjoy a memorable culinary experience.</p>
+                            
+                            <p><strong>Floral Artistry:</strong> Fresh flowers add natural beauty and fragrance to any celebration. Our floral designers create stunning arrangements that complement your décor and enhance the overall aesthetic of your event.</p>
+                            
+                            <h3>Why Choose Khushi Tent House?</h3>
+                            <ul>
+                                <li><strong>Experience:</strong> Years of expertise in handling events of all scales</li>
+                                <li><strong>Quality Assurance:</strong> Premium materials and meticulous attention to detail</li>
+                                <li><strong>Personalized Service:</strong> Customized solutions tailored to your vision</li>
+                                <li><strong>Professional Team:</strong> Skilled professionals dedicated to your event's success</li>
+                                <li><strong>Transparent Pricing:</strong> No hidden costs, clear communication</li>
+                                <li><strong>Timely Execution:</strong> Punctual setup and breakdown</li>
+                                <li><strong>Customer Support:</strong> Available throughout your planning journey</li>
+                            </ul>
+                            
+                            <p>Our clients' satisfaction is our greatest achievement. The smiles on their faces and the joy in their celebrations motivate us to continuously improve and innovate. We're not just service providers; we're partners in creating your perfect celebration.</p>
+                            
+                            <p>Whether you're planning an intimate family gathering or a grand wedding celebration, Khushi Tent House is here to make it spectacular. Contact us today to discuss your event, and let us show you why we're Lucknow's most trusted name in event services.</p>
+                            
+                            <p class="hindi-text" style="font-size: 1.1rem; color: var(--brand-gold); font-weight: 600; text-align: center; margin-top: 2rem;">खुशियाँ करें दुगनी खुशी टेंट हाउस संग</p>
+                        </div>
+                        
+                        <button class="blog-toggle-btn" onclick="toggleBlog(this)">
+                            Read More <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Blog Sidebar -->
+            <aside class="blog-sidebar">
+                <!-- Search Widget -->
+                <div class="sidebar-widget" data-aos="fade-left">
+                    <h3>Search Blog</h3>
+                    <form class="blog-search" onsubmit="return false;">
+                        <input type="text" placeholder="Search articles..." id="blogSearch">
+                        <button type="submit" onclick="searchBlogs()">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Categories Widget -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
+                    <h3>Categories</h3>
+                    <ul class="blog-categories">
+                        <li>
+                            <a href="#blog">
+                                <span>Wedding Trends</span>
+                                <span class="category-count">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog">
+                                <span>Event Planning</span>
+                                <span class="category-count">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog">
+                                <span>Company News</span>
+                                <span class="category-count">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog">
+                                <span>Decoration Ideas</span>
+                                <span class="category-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#blog">
+                                <span>Tips & Guides</span>
+                                <span class="category-count">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Comment Widget -->
+                <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="200">
+                    <h3>Leave a Comment</h3>
+                    <form class="comment-form" onsubmit="submitComment(event)">
+                        <input type="text" placeholder="Your Name *" required>
+                        <input type="email" placeholder="Your Email *" required>
+                        <textarea placeholder="Your Comment *" required></textarea>
+                        <button type="submit" class="comment-submit">
+                            <i class="fas fa-paper-plane"></i> Submit Comment
+                        </button>
+                    </form>
+                </div>
+            </aside>
         </div>
     </section>
 
@@ -1246,7 +1774,7 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2b0?q=80&w=2098&auto=format&fit=crop" alt="Wedding Setup" loading="lazy">
+                <img src="https://images.unsplash.com/photo-5167758481-83f29da8c2b0?q=80&w=2098&auto=format&fit=crop" alt="Wedding Setup" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Grand Wedding Setup</h4>
                 </div>
@@ -1450,7 +1978,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="blogs.html">Blog</a></li>
+                    <li><a href="#blog">Blog</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -1523,6 +2051,49 @@
                 behavior: 'smooth'
             });
         });
+
+        // Blog toggle function
+        function toggleBlog(button) {
+            const blogPost = button.closest('.blog-post');
+            const fullContent = blogPost.querySelector('.blog-post-full');
+            const icon = button.querySelector('i');
+            
+            if (fullContent.classList.contains('active')) {
+                fullContent.classList.remove('active');
+                button.innerHTML = 'Read More <i class="fas fa-chevron-down"></i>';
+            } else {
+                fullContent.classList.add('active');
+                button.innerHTML = 'Read Less <i class="fas fa-chevron-up"></i>';
+            }
+        }
+
+        // Blog search function
+        function searchBlogs() {
+            const searchTerm = document.getElementById('blogSearch').value.toLowerCase();
+            const blogPosts = document.querySelectorAll('.blog-post');
+            
+            blogPosts.forEach(post => {
+                const title = post.querySelector('h2').textContent.toLowerCase();
+                const content = post.querySelector('.blog-post-excerpt').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || content.includes(searchTerm)) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+            
+            if (searchTerm === '') {
+                blogPosts.forEach(post => post.style.display = 'block');
+            }
+        }
+
+        // Comment submission function
+        function submitComment(event) {
+            event.preventDefault();
+            alert('Thank you for your comment! We appreciate your feedback.');
+            event.target.reset();
+        }
     </script>
 </body>
 </html>
