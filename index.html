@@ -154,7 +154,7 @@
             color: var(--brand-white);
             position: relative;
             overflow: hidden;
-            padding: 2rem;
+            padding: 2rem 1rem;
         }
 
         .hero::before {
@@ -176,23 +176,25 @@
 
         .hero-content {
             max-width: 900px;
+            width: 100%;
             position: relative;
             z-index: 1;
+            padding: 0 1rem;
         }
 
         .hero h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 4rem;
+            font-size: clamp(2rem, 6vw, 4rem);
             font-weight: 700;
             margin-bottom: 1.5rem;
             color: var(--brand-gold);
             text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
-            letter-spacing: 3px;
+            letter-spacing: 2px;
             animation: fadeInUp 1s ease-out;
         }
 
         .hero-tagline {
-            font-size: 1.8rem;
+            font-size: clamp(1.1rem, 3vw, 1.8rem);
             margin-bottom: 1rem;
             font-weight: 600;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
@@ -200,8 +202,8 @@
         }
 
         .hero-subtitle {
-            font-size: 1.2rem;
-            margin-bottom: 3rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            margin-bottom: 2.5rem;
             opacity: 0.95;
             font-weight: 400;
             letter-spacing: 1px;
@@ -210,15 +212,15 @@
 
         .hero-cta {
             display: flex;
-            gap: 1.5rem;
+            gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
 
         .btn {
-            padding: 1.2rem 2.5rem;
-            font-size: 1.1rem;
+            padding: 1rem 2rem;
+            font-size: clamp(0.9rem, 2vw, 1.1rem);
             font-weight: 600;
             border: none;
             border-radius: 50px;
@@ -226,10 +228,12 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.7rem;
             transition: all 0.4s ease;
             letter-spacing: 0.5px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            white-space: nowrap;
         }
 
         .btn-primary {
@@ -268,7 +272,7 @@
 
         /* About Section */
         .about {
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--cream);
         }
 
@@ -283,12 +287,15 @@
 
         .about-image {
             position: relative;
+            width: 100%;
         }
 
         .about-image img {
             width: 100%;
+            height: auto;
             border-radius: 20px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            display: block;
         }
 
         .about-image::before {
@@ -305,13 +312,13 @@
 
         .about-content h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
+            font-size: clamp(2rem, 4vw, 2.5rem);
             color: var(--brand-brown);
             margin-bottom: 1rem;
         }
 
         .about-content .subtitle {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 2vw, 1.2rem);
             color: var(--brand-gold);
             margin-bottom: 1.5rem;
             font-weight: 600;
@@ -319,7 +326,7 @@
 
         .about-content p {
             color: var(--gray);
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
             margin-bottom: 1.2rem;
             line-height: 1.8;
         }
@@ -334,18 +341,19 @@
 
         .proprietor strong {
             color: var(--brand-brown);
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
         }
 
         /* Section Title */
         .section-title {
             text-align: center;
             margin-bottom: 3rem;
+            padding: 0 1rem;
         }
 
         .section-title h2 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             color: var(--brand-brown);
             margin-bottom: 0.5rem;
             position: relative;
@@ -365,14 +373,14 @@
         }
 
         .section-title .subtitle {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 2vw, 1.1rem);
             color: var(--gray);
             margin-top: 1.5rem;
         }
 
         /* Services Section */
         .services {
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--brand-white);
         }
 
@@ -437,7 +445,7 @@
 
         .service-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.6rem;
+            font-size: clamp(1.3rem, 2.5vw, 1.6rem);
             color: var(--brand-brown);
             margin-bottom: 1rem;
             font-weight: 700;
@@ -446,12 +454,12 @@
         .service-card p {
             color: var(--gray);
             line-height: 1.7;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
         }
 
         /* Gallery Section */
         .gallery {
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--light-gray);
         }
 
@@ -459,7 +467,7 @@
             max-width: 1400px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
         }
 
@@ -470,6 +478,7 @@
             height: 350px;
             cursor: pointer;
             box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            width: 100%;
         }
 
         .gallery-item img {
@@ -477,6 +486,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.5s;
+            display: block;
         }
 
         .gallery-item:hover img {
@@ -500,13 +510,13 @@
 
         .gallery-overlay h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.3rem;
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
             color: var(--brand-gold);
         }
 
         /* Testimonials */
         .testimonials {
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--brand-white);
         }
 
@@ -554,7 +564,7 @@
             margin-bottom: 1.5rem;
             position: relative;
             z-index: 1;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
         }
 
         .testimonial-author {
@@ -581,40 +591,37 @@
             color: var(--brand-brown);
             font-weight: 600;
             margin-bottom: 0.3rem;
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1.5vw, 1rem);
         }
 
         .author-info p {
             color: var(--gray);
-            font-size: 0.85rem;
+            font-size: clamp(0.8rem, 1.2vw, 0.85rem);
             margin: 0;
         }
 
         /* Service Area */
         .service-area {
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--cream);
         }
 
         .locations-container {
             max-width: 1000px;
             margin: 2rem auto 0;
-            display: flex;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
-            flex-wrap: wrap;
         }
 
         .location-card {
             background: var(--brand-white);
-            padding: 2rem 2.5rem;
+            padding: 2rem 1.5rem;
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s;
             border: 2px solid transparent;
-            flex: 1;
-            min-width: 200px;
         }
 
         .location-card:hover {
@@ -631,19 +638,19 @@
 
         .location-card h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: clamp(1.3rem, 2vw, 1.5rem);
             color: var(--brand-brown);
             margin-bottom: 0.5rem;
         }
 
         .location-card p {
             color: var(--gray);
-            font-size: 0.9rem;
+            font-size: clamp(0.85rem, 1.2vw, 0.9rem);
         }
 
         /* Contact Section */
         .contact {
-            padding: 4rem 2rem;
+            padding: 4rem 1.5rem;
             background: var(--brand-white);
         }
 
@@ -664,7 +671,7 @@
 
         .contact-info h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
             color: var(--brand-gold);
             margin-bottom: 2rem;
         }
@@ -684,6 +691,7 @@
             font-size: 1.5rem;
             color: var(--brand-gold);
             margin-top: 0.3rem;
+            flex-shrink: 0;
         }
 
         .contact-item a {
@@ -691,10 +699,15 @@
             text-decoration: none;
             transition: color 0.3s;
             word-break: break-word;
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
         }
 
         .contact-item a:hover {
             color: var(--brand-gold);
+        }
+
+        .contact-item div {
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
         }
 
         .contact-form {
@@ -705,7 +718,7 @@
 
         .contact-form h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
+            font-size: clamp(1.8rem, 3vw, 2.2rem);
             color: var(--brand-brown);
             margin-bottom: 2rem;
         }
@@ -719,7 +732,7 @@
             margin-bottom: 0.6rem;
             font-weight: 600;
             color: var(--brand-black);
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
         }
 
         .form-group input,
@@ -729,7 +742,7 @@
             border: 2px solid #ddd;
             border-radius: 10px;
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
             transition: all 0.3s;
         }
 
@@ -749,21 +762,21 @@
         footer {
             background: linear-gradient(135deg, var(--brand-black) 0%, #1a1a1a 100%);
             color: var(--brand-white);
-            padding: 3rem 2rem 1.5rem;
+            padding: 3rem 1.5rem 1.5rem;
         }
 
         .footer-content {
             max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2.5rem;
             margin-bottom: 2.5rem;
         }
 
         .footer-about h3 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 2.5vw, 1.8rem);
             color: var(--brand-gold);
             margin-bottom: 1rem;
         }
@@ -772,13 +785,13 @@
             color: rgba(255,255,255,0.8);
             line-height: 1.7;
             margin-bottom: 1.2rem;
-            font-size: 0.95rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.95rem);
         }
 
         .footer-links h4,
         .footer-contact h4 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.4rem;
+            font-size: clamp(1.2rem, 2vw, 1.4rem);
             color: var(--brand-gold);
             margin-bottom: 1.2rem;
         }
@@ -793,7 +806,7 @@
             display: block;
             margin-bottom: 0.7rem;
             transition: all 0.3s;
-            font-size: 0.9rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.9rem);
         }
 
         .footer-links a:hover {
@@ -807,17 +820,19 @@
             display: flex;
             align-items: center;
             gap: 0.7rem;
-            font-size: 0.9rem;
+            font-size: clamp(0.85rem, 1.5vw, 0.9rem);
         }
 
         .footer-contact i {
             color: var(--brand-gold);
+            flex-shrink: 0;
         }
 
         .social-links {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
+            flex-wrap: wrap;
         }
 
         .social-links a {
@@ -844,7 +859,7 @@
             padding-top: 1.5rem;
             border-top: 1px solid rgba(255,255,255,0.1);
             color: rgba(255,255,255,0.6);
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1.5vw, 0.9rem);
         }
 
         /* Scroll to top button */
@@ -885,36 +900,27 @@
                 grid-template-columns: 1fr;
             }
 
-            .footer-content {
-                grid-template-columns: 1fr;
+            .about-image::before {
+                top: -10px;
+                left: -10px;
             }
 
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-
-            .about-image::before {
-                top: -10px;
-                left: -10px;
-            }
         }
 
         @media (max-width: 768px) {
-            body{
-                max-width: 90%;
-                overflow-x:hidden;
-            }
             nav {
-                width:100%;
-                padding: 0.8rem 1.5rem;
+                padding: 0.8rem 1rem;
             }
 
             .logo-container img {
-                height: 45px;
+                height: 40px;
             }
 
             .logo-text {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
 
             .nav-links {
@@ -926,119 +932,25 @@
             }
 
             .hero {
-                margin-top: 65px;
-                min-height: 90vh;
-                padding: 1.5rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-                letter-spacing: 1px;
-            }
-
-            .hero-tagline {
-                font-size: 1.3rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1rem;
-            }
-
-            .btn {
-                padding: 1rem 2rem;
-                font-size: 1rem;
-            }
-
-            .section-title h2 {
-                font-size: 2.2rem;
-            }
-
-            .section-title .subtitle {
-                font-size: 1rem;
-            }
-
-            .about {
-                padding: 3rem 1.5rem;
-            }
-
-            .about-content h2 {
-                font-size: 2rem;
-            }
-
-            .about-content .subtitle {
-                font-size: 1.1rem;
+                margin-top: 60px;
+                min-height: 85vh;
+                padding: 2rem 1rem;
             }
 
             .about-image::before {
                 display: none;
             }
 
-            .services {
-                padding: 3rem 1.5rem;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .gallery {
-                padding: 3rem 1.5rem;
-            }
-
             .gallery-grid {
                 grid-template-columns: 1fr;
-                gap: 1.2rem;
             }
 
             .gallery-item {
                 height: 300px;
             }
 
-            .testimonials {
-                padding: 3rem 1.5rem;
-            }
-
-            .testimonials-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-
-            .service-area {
-                padding: 3rem 1.5rem;
-            }
-
-            .locations-container {
-                flex-direction: column;
-            }
-
-            .location-card {
-                min-width: 100%;
-            }
-
-            .contact {
-                padding: 3rem 1.5rem;
-            }
-
-            .contact-info h3,
-            .contact-form h3 {
-                font-size: 1.8rem;
-            }
-
-            .contact-info {
-                padding: 2rem;
-            }
-
-            .contact-form {
-                padding: 2rem;
-            }
-
-            footer {
-                padding: 2.5rem 1.5rem 1.5rem;
-            }
-
-            .footer-content {
-                gap: 2rem;
+            .btn {
+                padding: 0.9rem 1.5rem;
             }
 
             .scroll-top {
@@ -1046,42 +958,27 @@
                 right: 20px;
                 width: 45px;
                 height: 45px;
-                font-size: 1.2rem;
             }
         }
 
         @media (max-width: 480px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero-tagline {
-                font-size: 1.1rem;
-            }
-
-            .hero-subtitle {
-                font-size: 0.95rem;
+            .hero-cta {
+                flex-direction: column;
+                width: 100%;
             }
 
             .btn {
-                padding: 0.9rem 1.8rem;
-                font-size: 0.95rem;
-            }
-
-            .section-title h2 {
-                font-size: 1.8rem;
-            }
-
-            .about-content h2 {
-                font-size: 1.8rem;
-            }
-
-            .service-card h3 {
-                font-size: 1.4rem;
+                width: 100%;
+                max-width: 300px;
             }
 
             .gallery-item {
                 height: 250px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 1.5rem;
             }
         }
     </style>
@@ -1205,37 +1102,37 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2b0?q=80&w=2098" alt="Wedding Setup">
+                <img src="https://images.unsplash.com/photo-1519167758481-83f29da8c2b0?q=80&w=2098&auto=format&fit=crop" alt="Wedding Setup" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Grand Wedding Setup</h4>
                 </div>
             </div>
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069" alt="Stage Decoration">
+                <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069&auto=format&fit=crop" alt="Stage Decoration" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Elegant Stage Decoration</h4>
                 </div>
             </div>
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070" alt="Floral Decor">
+                <img src="https://images.unsplash.com/photo-1530023367847-a683933f4172?q=80&w=2070&auto=format&fit=crop" alt="Floral Decor" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Beautiful Floral Arrangements</h4>
                 </div>
             </div>
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070" alt="Catering">
+                <img src="https://images.unsplash.com/photo-1478146896981-b80fe463b330?q=80&w=2070&auto=format&fit=crop" alt="Catering" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Delicious Catering</h4>
                 </div>
             </div>
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062" alt="Lighting">
+                <img src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?q=80&w=2062&auto=format&fit=crop" alt="Lighting" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Stunning Lighting Effects</h4>
                 </div>
             </div>
             <div class="gallery-item" data-aos="zoom-in" data-aos-delay="600">
-                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069" alt="Event Setup">
+                <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069&auto=format&fit=crop" alt="Event Setup" loading="lazy">
                 <div class="gallery-overlay">
                     <h4 class="serif-text">Complete Event Setup</h4>
                 </div>
