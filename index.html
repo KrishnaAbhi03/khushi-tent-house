@@ -388,7 +388,7 @@
             max-width: 1300px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
@@ -455,6 +455,94 @@
             color: var(--gray);
             line-height: 1.7;
             font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+        }
+
+        /* Blog Preview Section - NEW */
+        .blog-preview {
+            padding: 4rem 1.5rem;
+            background: var(--light-gray);
+        }
+
+        .blog-preview-grid {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .blog-preview-card {
+            background: var(--brand-white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.4s ease;
+        }
+
+        .blog-preview-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(129, 68, 6, 0.2);
+        }
+
+        .blog-preview-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .blog-preview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .blog-preview-card:hover .blog-preview-image img {
+            transform: scale(1.1);
+        }
+
+        .blog-preview-content {
+            padding: 2rem;
+        }
+
+        .blog-preview-date {
+            color: var(--brand-gold);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .blog-preview-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            color: var(--brand-brown);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .blog-preview-content p {
+            color: var(--gray);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .blog-read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--brand-brown);
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .blog-read-more:hover {
+            color: var(--brand-gold);
+            gap: 0.8rem;
         }
 
         /* Gallery Section */
@@ -995,6 +1083,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="blogs.html">Blog</a></li>
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -1035,7 +1124,7 @@
                 <p>From intimate gatherings to grand celebrations, we handle every detail with precision and care. Our team of dedicated professionals ensures that your event is executed flawlessly, allowing you to enjoy every moment stress-free.</p>
                 <p>We specialize in traditional Indian weddings, corporate events, birthday celebrations, and all special occasions. Our commitment to quality, creativity, and customer satisfaction sets us apart in Lucknow and surrounding areas.</p>
                 <div class="proprietor">
-                    <p><strong>Amar Yadav</strong> - Proprietor</p>
+                    <p><strong>Mrs. Rita Yadav</strong> - Proprietor</p>
                     <p class="hindi-text">आपके विश्वास और खुशियों की जिम्मेदारी हमारी</p>
                 </div>
             </div>
@@ -1090,6 +1179,61 @@
                 </div>
                 <h3 class="serif-text">Event Arrangements</h3>
                 <p>Complete event management for parties, corporate events, and celebrations. End-to-end planning and execution.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview Section - NEW -->
+    <section class="blog-preview">
+        <div class="section-title" data-aos="fade-up">
+            <h2 class="serif-text">Latest from Our Blog</h2>
+            <p class="subtitle hindi-text">ताज़ा ब्लॉग पोस्ट</p>
+        </div>
+        <div class="blog-preview-grid">
+            <div class="blog-preview-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-preview-image">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" alt="Wedding Decoration Trends 2025" loading="lazy">
+                </div>
+                <div class="blog-preview-content">
+                    <div class="blog-preview-date">
+                        <i class="far fa-calendar-alt"></i> December 8, 2024
+                    </div>
+                    <h3>Top Wedding Decoration Trends for 2025</h3>
+                    <p>Discover the hottest wedding decoration trends that will make your 2025 celebration unforgettable. From sustainable décor to bold color palettes...</p>
+                    <a href="blogs.html#blog1" class="blog-read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-preview-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-preview-image">
+                    <img src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=2069" alt="Choosing Perfect Tent House" loading="lazy">
+                </div>
+                <div class="blog-preview-content">
+                    <div class="blog-preview-date">
+                        <i class="far fa-calendar-alt"></i> December 5, 2024
+                    </div>
+                    <h3>How to Choose the Perfect Tent House for Your Event</h3>
+                    <p>Planning an outdoor event? Learn the essential factors to consider when selecting a tent house service that matches your vision and budget...</p>
+                    <a href="blogs.html#blog2" class="blog-read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="blog-preview-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="blog-preview-image">
+                    <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2069" alt="Khushi Tent House Services" loading="lazy">
+                </div>
+                <div class="blog-preview-content">
+                    <div class="blog-preview-date">
+                        <i class="far fa-calendar-alt"></i> December 1, 2024
+                    </div>
+                    <h3>Khushi Tent House: Making Your Celebrations Grand</h3>
+                    <p>Explore how Khushi Tent House has been transforming ordinary events into extraordinary celebrations with premium services and attention to detail...</p>
+                    <a href="blogs.html#blog3" class="blog-read-more">
+                        Read More <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -1223,8 +1367,9 @@
                 <div class="contact-item">
                     <i class="fas fa-user-tie"></i>
                     <div>
-                        <strong>Amar Yadav</strong><br>
+                        <strong>Mrs. Rita Yadav</strong><br>
                         Proprietor<br>
+                        <span class="hindi-text">स्वामी</span>
                     </div>
                 </div>
                 <div class="contact-item">
@@ -1305,6 +1450,7 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="blogs.html">Blog</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
